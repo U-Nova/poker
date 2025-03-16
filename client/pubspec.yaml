@@ -46,6 +46,8 @@ dependencies:
   flutter_local_notifications: ^19.0.0
   # DB定義参照用
   drift_db_viewer: ^2.1.0
+  common:
+    path: ../common
 
 dev_dependencies:
   flutter_test:
