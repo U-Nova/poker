@@ -57,5 +57,27 @@ dev_dependencies:
   json_serializable: ^6.9.4
   drift_dev: ^2.26.0
 
+# スプラッシュ画面の設定。createコマンドを叩くことで自動生成してくれる
+flutter_native_splash:
+  color: "#add8e6"
+  image: "assets/images/splash/default.png"
+  color_dark: "#262626"
+  image_dark: "assets/images/splash/default.png"
+  fullscreen: true
+  android_12:
+    icon_background_color: "#add8e6"
+    image: "assets/images/splash/default.png"
+    icon_background_color_dark: "#262626"
+    image_dark: "assets/images/splash/default.png"
+
+# アプリアイコンの設定。各環境ごとの設定はyamlファイルで設定しているが、ここにも記載しないとエラーになるみたいなので記載している
+flutter_launcher_icons:
+  ios: true
+  remove_alpha_ios: true
+
 flutter:
   uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/
+    - assets/lotties/
