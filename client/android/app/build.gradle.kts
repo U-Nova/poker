@@ -5,6 +5,17 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+def dartDefines = [:];
+if (project.hasProperty('dart-defines')) {
+    // カンマ区切りかつBase64でエンコードされている dart-defines をデコードして変数に格納します。
+    dartDefines = dartDefines + project.property('dart-defines')
+        .split(',')
+        .collectEntries { entry ->
+            def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
+            pair.length == 2 ? [(pair.first()): pair.last()] : [:]
+        }
+}
+
 android {
     namespace = "com.example.client"
     compileSdk = flutter.compileSdkVersion
@@ -28,6 +39,8 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        applicationId "${dartDefines.APP_ID}"
+        resValue "string", "app_name", "${dartDefines.APP_NAME}"
     }
 
     buildTypes {
