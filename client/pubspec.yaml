@@ -85,4 +85,11 @@ flutter:
   generate: true
   assets:
     - assets/images/
+    - assets/images/background/
+    - assets/images/playingcard/normal/
+    - assets/images/playingcard/normal/club/
+    - assets/images/playingcard/normal/dia/
+    - assets/images/playingcard/normal/heart/
+    - assets/images/playingcard/normal/spade/
+    - assets/images/playingcard/normal/joker/
     - assets/lotties/
