@@ -10,8 +10,8 @@ environment:
 # Add regular dependencies here.
 dependencies:
   # path: ^1.8.0
-  common:
-    path: ../common
+  # common:
+  #   path: ../common
 
 dev_dependencies:
   lints: ^5.0.0
