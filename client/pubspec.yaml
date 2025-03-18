@@ -18,6 +18,7 @@ dependencies:
   # 多言語対応
   flutter_localizations:
     sdk: flutter
+  intl: ^0.19.0
   # アニメーション
   lottie: ^3.3.1
   # ログ用
