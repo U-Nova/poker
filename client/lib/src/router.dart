@@ -1,4 +1,5 @@
-import 'package:client/src/page/top_view.dart';
+import 'package:client/src/page/game/game_view.dart';
+import 'package:client/src/page/top/top_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,10 +11,10 @@ final GoRouter router = GoRouter(
       name: '/',
       builder: (BuildContext context, GoRouterState state) => const TopView(),
     ),
-    // GoRoute(
-    //   path: '/top',
-    //   name: '/top',
-    //   builder: (BuildContext context, GoRouterState state) => const Sample(),
-    // ),
+    GoRoute(
+      path: '/game',
+      name: '/game',
+      builder: (BuildContext context, GoRouterState state) => const GameView(),
+    ),
   ],
 );
