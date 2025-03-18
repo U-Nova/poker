@@ -1,4 +1,5 @@
 import 'package:client/gen/assets.gen.dart';
+import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
 import 'package:client/src/router.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -42,7 +43,23 @@ class TopView extends ConsumerWidget {
                       onTap: () {
                         router.pushNamed('/game');
                       },
-                    )
+                    ),
+                    GestureDetector(
+                      child: Text(
+                        '画像ロード',
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onTap: () async {
+                        await ref
+                            .read(playingcardImageProvider.notifier)
+                            .setup();
+                      },
+                    ),
+                    banner(ref)
                   ],
                 ),
               ),
@@ -52,4 +69,28 @@ class TopView extends ConsumerWidget {
       ),
     );
   }
+}
+
+Widget banner(WidgetRef ref) {
+  final images = ref.watch(playingcardImageProvider);
+  return Container(
+    padding: EdgeInsets.only(top: 50, bottom: 50),
+    color: Colors.black38,
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          ...images
+              .getAll()
+              .map((image) => image != null
+                  ? Image.memory(
+                      image,
+                      width: 70,
+                    )
+                  : Stack())
+              .toList()
+        ],
+      ),
+    ),
+  );
 }
