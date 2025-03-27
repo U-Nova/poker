@@ -1,12 +1,20 @@
+import 'package:client/firebase_options.dart';
 import 'package:client/src/domain/locales/locales.dart';
 import 'package:client/src/domain/locales/locales_provider.dart';
 import 'package:client/src/router.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// Firebaseの初期化をする
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  print('Firebase connected projectId: ${Firebase.app().options.projectId}');
   runApp(const ProviderScope(child: MyApp()));
 }
 
