@@ -11,6 +11,12 @@
 - この辺参考にして設定・使うと良さそう
   - https://zenn.dev/altiveinc/articles/flutter-version-management
 
+# ディレクトリ構成・アプリケーションアーキテクチャ
+
+## アプリケーションアーキテクチャ
+- 以下ファイル参照
+  - https://github.com/U-Nova/poker/blob/main/client/doc/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3.drawio.png
+
 # 開発Tips
 
 ## 環境変数の設定
@@ -39,3 +45,10 @@
 - pubspec.yamlにフォルダを追記しないと自動生成対象にならないことに注意
 - `derry gen`を実行する
 - asset.gen.dartに自動生成されるので、画像ファイル名を型安全に使用できる
+
+## domain層の実装
+- 基本的に`@freezed`を使用して実装する
+- メリットは、copywithメソッドの自動生成と、jsonコンバータの自動生成をしてくれるところ
+- この辺を参考にキャッチアップよろしく
+  - https://zenn.dev/sae_eng/articles/ed68107fdae18d
+- 自動生成は`derry gen`を実行する
