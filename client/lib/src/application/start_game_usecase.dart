@@ -1,0 +1,1 @@
+/// useCaseはrepositoryとdomainを使ってユーザ操作を完結させる
