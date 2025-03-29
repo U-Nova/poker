@@ -34,6 +34,7 @@ const _$CardNumberEnumMap = {
 };
 
 const _$CardSuitEnumMap = {
+  CardSuit.joker: 'JOKER',
   CardSuit.spade: 'SPADE',
   CardSuit.heart: 'HEART',
   CardSuit.diamond: 'DIAMOND',

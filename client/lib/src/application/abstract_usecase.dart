@@ -1,3 +1,3 @@
-abstract class AbstractUsecase {
-  Future<Res> execute<Req, Res>(Req req);
+abstract class AbstractUsecase<Req, Res> {
+  Future<Res> execute(Req req);
 }

@@ -1,6 +1,6 @@
 import 'package:client/gen/assets.gen.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
-import 'package:client/src/router.dart';
+import 'package:client/src/page/top/top_presenter.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -9,6 +9,9 @@ class TopView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final viewModel = ref.watch(topProvider);
+    final presenter = ref.watch(topProvider.notifier);
+
     return Scaffold(
       body: Container(
         child: Stack(
@@ -36,12 +39,16 @@ class TopView extends ConsumerWidget {
                       ),
                     ),
                     GestureDetector(
-                      child: Image.asset(
-                        Assets.images.playingcard.normal.back.path,
-                        width: 100,
+                      child: Text(
+                        'ゲーム開始',
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      onTap: () {
-                        router.pushNamed('/game');
+                      onTap: () async {
+                        await presenter.startGame();
                       },
                     ),
                     GestureDetector(
