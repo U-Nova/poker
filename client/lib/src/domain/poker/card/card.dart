@@ -17,4 +17,10 @@ class Card with _$Card {
   factory Card.fromJson(Map<String, Object?> json) => _$CardFromJson(json);
 
   String get id => '${cardSuit.name}_${cardNumber.value}';
+
+  /// テーマを指定しない場合はdefaultテーマとして扱う
+  String imageKey(String? thema) {
+    final themaString = thema != null ? thema : 'normal';
+    return '${themaString}_${cardSuit.name}_${cardNumber.value}';
+  }
 }

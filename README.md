@@ -41,6 +41,12 @@
                 └── ${XXX}_presenter.dart // ユーザアクションによる関数はここに実装される。ここからusecaseを呼ぶイメージ
 ```
 
+※ ディレクトリ構成は以下を使って記載しているので、メンテしたらここも更新してね♡
+
+```
+https://tree.nathanfriend.com/?s=(%27optCs!(%27fancy6~fullPath!false~trailingSlash6~rootDot6)~8(%278%27libAsrc-adapter-*firestore-**dto-*0_dto20434applicatC-3usecase2comp7ent-c7st-domain-32extensC-page-5pageName)-929_model20_presenterB%27)~versC!%271%27)*%20%20-A*0*5XXX)2B-35c7text)-04repository25*%24(6!true7on8source!90_viewA%5Cn*B.dartCi7%01CBA987654320-*
+```
+
 ## アプリケーションアーキテクチャ
 - 以下ファイル参照
   - https://github.com/U-Nova/poker/blob/main/client/doc/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3.drawio.png
