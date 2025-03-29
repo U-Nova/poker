@@ -11,6 +11,11 @@
 - この辺参考にして設定・使うと良さそう
   - https://zenn.dev/altiveinc/articles/flutter-version-management
 
+- derryコマンド
+  - scriptの実行に使う
+  - 以下を参考に設定すべし
+    - https://zenn.dev/k9i/articles/c54446a72f1f46
+
 # ディレクトリ構成・アプリケーションアーキテクチャ
 
 ## ディレクトリ構成
