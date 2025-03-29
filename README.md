@@ -13,6 +13,34 @@
 
 # ディレクトリ構成・アプリケーションアーキテクチャ
 
+## ディレクトリ構成
+```javascript
+.
+└── lib/
+    └── src/
+        ├── adapter/
+        │   ├── firestore/
+        │   │   ├── dto/
+        │   │   │   └── ${XXX}_dto.dart // 多分これは必要になる。domainをそのままCRUDに使える場合は実装しなくてもいいと思う
+        │   │   └── ${XXX}repository.dart // 単純なCRUD処理しか実装しないイメージ
+        │   └── ${context}/
+        │       └── ${XXX}repository.dart // domainをinterfaceにする。この中でfirestore配下を使いながら、やりたいことを実現するイメージ
+        ├── application/
+        │   └── ${context}/
+        │       └── ${XXX}usecase.dart // なんらかのアクションごとに実装するイメージ。ex) ゲーム開始 -> start_game_usecaseなど
+        ├── component // 共通で使用したいウィジェットはここ
+        ├── const // 定数の定義はここ
+        ├── domain/
+        │   └── ${context}/
+        │       └── ${XXX}.dart // domainになるべくロジックは閉じ込めたい
+        ├── extension // dartはクラスの拡張ができるので、拡張の実装をする場合はここ
+        └── page/
+            └── ${pageName}/
+                ├── ${XXX}_view.dart
+                ├── ${XXX}_view_model.dart
+                └── ${XXX}_presenter.dart // ユーザアクションによる関数はここに実装される。ここからusecaseを呼ぶイメージ
+```
+
 ## アプリケーションアーキテクチャ
 - 以下ファイル参照
   - https://github.com/U-Nova/poker/blob/main/client/doc/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3.drawio.png
