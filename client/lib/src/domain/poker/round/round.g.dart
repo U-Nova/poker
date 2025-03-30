@@ -8,18 +8,23 @@ part of 'round.dart';
 
 _$RoundImpl _$$RoundImplFromJson(Map<String, dynamic> json) => _$RoundImpl(
   id: json['id'] as String,
-  roundType: json['roundType'] as String,
+  roundType: $enumDecode(_$RoundTypeEnumMap, json['roundType']),
   currentBetAmount: (json['currentBetAmount'] as num).toInt(),
-  playerActions:
-      (json['playerActions'] as List<dynamic>)
-          .map((e) => PlayerAction.fromJson(e as Map<String, dynamic>))
-          .toList(),
+  PlayerTurn: json['PlayerTurn'] as List<dynamic>,
 );
 
 Map<String, dynamic> _$$RoundImplToJson(_$RoundImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'roundType': instance.roundType,
+      'roundType': _$RoundTypeEnumMap[instance.roundType]!,
       'currentBetAmount': instance.currentBetAmount,
-      'playerActions': instance.playerActions,
+      'PlayerTurn': instance.PlayerTurn,
     };
+
+const _$RoundTypeEnumMap = {
+  RoundType.INIT: 'INIT',
+  RoundType.PREFLOP: 'PREFLOP',
+  RoundType.FROP: 'FROP',
+  RoundType.TURN: 'TURN',
+  RoundType.RIVER: 'RIVER',
+};

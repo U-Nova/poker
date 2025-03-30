@@ -22,9 +22,9 @@ Round _$RoundFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Round {
   String get id => throw _privateConstructorUsedError;
-  String get roundType => throw _privateConstructorUsedError; //todo: enumにする
+  RoundType get roundType => throw _privateConstructorUsedError;
   int get currentBetAmount => throw _privateConstructorUsedError;
-  List<PlayerAction> get playerActions => throw _privateConstructorUsedError;
+  List<PlayerTurn> get PlayerTurn => throw _privateConstructorUsedError;
 
   /// Serializes this Round to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,9 +42,9 @@ abstract class $RoundCopyWith<$Res> {
   @useResult
   $Res call({
     String id,
-    String roundType,
+    RoundType roundType,
     int currentBetAmount,
-    List<PlayerAction> playerActions,
+    List<PlayerTurn> PlayerTurn,
   });
 }
 
@@ -66,7 +66,7 @@ class _$RoundCopyWithImpl<$Res, $Val extends Round>
     Object? id = null,
     Object? roundType = null,
     Object? currentBetAmount = null,
-    Object? playerActions = null,
+    Object? PlayerTurn = null,
   }) {
     return _then(
       _value.copyWith(
@@ -79,17 +79,17 @@ class _$RoundCopyWithImpl<$Res, $Val extends Round>
                 null == roundType
                     ? _value.roundType
                     : roundType // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as RoundType,
             currentBetAmount:
                 null == currentBetAmount
                     ? _value.currentBetAmount
                     : currentBetAmount // ignore: cast_nullable_to_non_nullable
                         as int,
-            playerActions:
-                null == playerActions
-                    ? _value.playerActions
-                    : playerActions // ignore: cast_nullable_to_non_nullable
-                        as List<PlayerAction>,
+            PlayerTurn:
+                null == PlayerTurn
+                    ? _value.PlayerTurn
+                    : PlayerTurn // ignore: cast_nullable_to_non_nullable
+                        as List<PlayerTurn>,
           )
           as $Val,
     );
@@ -106,9 +106,9 @@ abstract class _$$RoundImplCopyWith<$Res> implements $RoundCopyWith<$Res> {
   @useResult
   $Res call({
     String id,
-    String roundType,
+    RoundType roundType,
     int currentBetAmount,
-    List<PlayerAction> playerActions,
+    List<PlayerTurn> PlayerTurn,
   });
 }
 
@@ -129,7 +129,7 @@ class __$$RoundImplCopyWithImpl<$Res>
     Object? id = null,
     Object? roundType = null,
     Object? currentBetAmount = null,
-    Object? playerActions = null,
+    Object? PlayerTurn = null,
   }) {
     return _then(
       _$RoundImpl(
@@ -142,17 +142,17 @@ class __$$RoundImplCopyWithImpl<$Res>
             null == roundType
                 ? _value.roundType
                 : roundType // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as RoundType,
         currentBetAmount:
             null == currentBetAmount
                 ? _value.currentBetAmount
                 : currentBetAmount // ignore: cast_nullable_to_non_nullable
                     as int,
-        playerActions:
-            null == playerActions
-                ? _value._playerActions
-                : playerActions // ignore: cast_nullable_to_non_nullable
-                    as List<PlayerAction>,
+        PlayerTurn:
+            null == PlayerTurn
+                ? _value._PlayerTurn
+                : PlayerTurn // ignore: cast_nullable_to_non_nullable
+                    as List<PlayerTurn>,
       ),
     );
   }
@@ -165,8 +165,8 @@ class _$RoundImpl implements _Round {
     required this.id,
     required this.roundType,
     required this.currentBetAmount,
-    required final List<PlayerAction> playerActions,
-  }) : _playerActions = playerActions;
+    required final List<PlayerTurn> PlayerTurn,
+  }) : _PlayerTurn = PlayerTurn;
 
   factory _$RoundImpl.fromJson(Map<String, dynamic> json) =>
       _$$RoundImplFromJson(json);
@@ -174,21 +174,20 @@ class _$RoundImpl implements _Round {
   @override
   final String id;
   @override
-  final String roundType;
-  //todo: enumにする
+  final RoundType roundType;
   @override
   final int currentBetAmount;
-  final List<PlayerAction> _playerActions;
+  final List<PlayerTurn> _PlayerTurn;
   @override
-  List<PlayerAction> get playerActions {
-    if (_playerActions is EqualUnmodifiableListView) return _playerActions;
+  List<PlayerTurn> get PlayerTurn {
+    if (_PlayerTurn is EqualUnmodifiableListView) return _PlayerTurn;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_playerActions);
+    return EqualUnmodifiableListView(_PlayerTurn);
   }
 
   @override
   String toString() {
-    return 'Round(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerActions: $playerActions)';
+    return 'Round(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, PlayerTurn: $PlayerTurn)';
   }
 
   @override
@@ -202,8 +201,8 @@ class _$RoundImpl implements _Round {
             (identical(other.currentBetAmount, currentBetAmount) ||
                 other.currentBetAmount == currentBetAmount) &&
             const DeepCollectionEquality().equals(
-              other._playerActions,
-              _playerActions,
+              other._PlayerTurn,
+              _PlayerTurn,
             ));
   }
 
@@ -214,7 +213,7 @@ class _$RoundImpl implements _Round {
     id,
     roundType,
     currentBetAmount,
-    const DeepCollectionEquality().hash(_playerActions),
+    const DeepCollectionEquality().hash(_PlayerTurn),
   );
 
   /// Create a copy of Round
@@ -234,9 +233,9 @@ class _$RoundImpl implements _Round {
 abstract class _Round implements Round {
   const factory _Round({
     required final String id,
-    required final String roundType,
+    required final RoundType roundType,
     required final int currentBetAmount,
-    required final List<PlayerAction> playerActions,
+    required final List<PlayerTurn> PlayerTurn,
   }) = _$RoundImpl;
 
   factory _Round.fromJson(Map<String, dynamic> json) = _$RoundImpl.fromJson;
@@ -244,11 +243,11 @@ abstract class _Round implements Round {
   @override
   String get id;
   @override
-  String get roundType; //todo: enumにする
+  RoundType get roundType;
   @override
   int get currentBetAmount;
   @override
-  List<PlayerAction> get playerActions;
+  List<PlayerTurn> get PlayerTurn;
 
   /// Create a copy of Round
   /// with the given fields replaced by the non-null parameter values.

@@ -1,3 +1,4 @@
+import 'package:client/src/domain/poker/player_action_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'player_action.freezed.dart';
@@ -7,7 +8,7 @@ part 'player_action.g.dart';
 class PlayerAction with _$PlayerAction {
   const factory PlayerAction({
     required String playerId,
-    required String actionType, //todo: enumにする
+    required PlayerActionType actionType,
     required int tipAmount,
   }) = _PlayerAction;
 

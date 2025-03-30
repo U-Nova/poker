@@ -22,7 +22,7 @@ PlayerAction _$PlayerActionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PlayerAction {
   String get playerId => throw _privateConstructorUsedError;
-  String get actionType => throw _privateConstructorUsedError; //todo: enumにする
+  PlayerActionType get actionType => throw _privateConstructorUsedError;
   int get tipAmount => throw _privateConstructorUsedError;
 
   /// Serializes this PlayerAction to a JSON map.
@@ -42,7 +42,7 @@ abstract class $PlayerActionCopyWith<$Res> {
     $Res Function(PlayerAction) then,
   ) = _$PlayerActionCopyWithImpl<$Res, PlayerAction>;
   @useResult
-  $Res call({String playerId, String actionType, int tipAmount});
+  $Res call({String playerId, PlayerActionType actionType, int tipAmount});
 }
 
 /// @nodoc
@@ -75,7 +75,7 @@ class _$PlayerActionCopyWithImpl<$Res, $Val extends PlayerAction>
                 null == actionType
                     ? _value.actionType
                     : actionType // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as PlayerActionType,
             tipAmount:
                 null == tipAmount
                     ? _value.tipAmount
@@ -96,7 +96,7 @@ abstract class _$$PlayerActionImplCopyWith<$Res>
   ) = __$$PlayerActionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String playerId, String actionType, int tipAmount});
+  $Res call({String playerId, PlayerActionType actionType, int tipAmount});
 }
 
 /// @nodoc
@@ -128,7 +128,7 @@ class __$$PlayerActionImplCopyWithImpl<$Res>
             null == actionType
                 ? _value.actionType
                 : actionType // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as PlayerActionType,
         tipAmount:
             null == tipAmount
                 ? _value.tipAmount
@@ -154,8 +154,7 @@ class _$PlayerActionImpl implements _PlayerAction {
   @override
   final String playerId;
   @override
-  final String actionType;
-  //todo: enumにする
+  final PlayerActionType actionType;
   @override
   final int tipAmount;
 
@@ -198,7 +197,7 @@ class _$PlayerActionImpl implements _PlayerAction {
 abstract class _PlayerAction implements PlayerAction {
   const factory _PlayerAction({
     required final String playerId,
-    required final String actionType,
+    required final PlayerActionType actionType,
     required final int tipAmount,
   }) = _$PlayerActionImpl;
 
@@ -208,7 +207,7 @@ abstract class _PlayerAction implements PlayerAction {
   @override
   String get playerId;
   @override
-  String get actionType; //todo: enumにする
+  PlayerActionType get actionType;
   @override
   int get tipAmount;
 
