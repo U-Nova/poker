@@ -28,11 +28,11 @@
         │   │   ├── dto/
         │   │   │   └── ${XXX}_dto.dart // 多分これは必要になる。domainをそのままCRUDに使える場合は実装しなくてもいいと思う
         │   │   └── ${XXX}repository.dart // 単純なCRUD処理しか実装しないイメージ
-        │   └── ${context}/
-        │       └── ${XXX}repository.dart // domainをinterfaceにする。この中でfirestore配下を使いながら、やりたいことを実現するイメージ
         ├── application/
         │   └── ${context}/
         │       └── ${XXX}usecase.dart // なんらかのアクションごとに実装するイメージ。ex) ゲーム開始 -> start_game_usecaseなど
+        │       └── repository/
+        │           └── ${XXX}repository.dart // domainをinterfaceにする。この中でfirestore配下を使いながら、やりたいことを実現するイメージ
         ├── component // 共通で使用したいウィジェットはここ
         ├── const // 定数の定義はここ
         ├── domain/
@@ -49,7 +49,7 @@
 ※ ディレクトリ構成は以下を使って記載しているので、メンテしたらここも更新してね♡
 
 ```
-https://tree.nathanfriend.com/?s=(%27optCs!(%27fancy6~fullPath!false~trailingSlash6~rootDot6)~8(%278%27libAsrc-adapter-*firestore-**dto-*0_dto20434applicatC-3usecase2comp7ent-c7st-domain-32extensC-page-5pageName)-929_model20_presenterB%27)~versC!%271%27)*%20%20-A*0*5XXX)2B-35c7text)-04repository25*%24(6!true7on8source!90_viewA%5Cn*B.dartCi7%01CBA987654320-*
+https://tree.nathanfriend.com/?s=(%27opti8s!(%27fancy6~fullPath!false~trailingSlash6~rootDot6)~7(%277%27libAsrc-adapterCfirestoreC*dtoC0_dto2032applicatio4usecase2**3C032comp8ent-c8st-domai42extensi8-page-5pageName)-929_model20_presenterB%27)~versi8!%271%27)*%20%20-A*0*5XXX)2B-3repository4n-5c8text)-05*%24(6!true7source!8on90_viewA%5Cn*B.dartC-*%01CBA987654320-*
 ```
 
 ## アプリケーションアーキテクチャ
