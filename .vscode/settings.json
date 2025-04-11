@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "quickfix.insertSemicolon": "always",
+    }
+  },
+  "files.autoSave": "off",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false
+}
