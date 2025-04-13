@@ -1,3 +1,4 @@
+import 'package:client/src/domain/poker/card/card.dart';
 import 'package:client/src/domain/poker/community_card_order.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -8,7 +9,7 @@ part 'community_card.g.dart';
 class CommunityCard with _$CommunityCard {
   const factory CommunityCard({
     required bool isOpen,
-    required CommunityCard card,
+    required Card card,
     required CommunityCardOrder order,
   }) = _CommunityCard;
 

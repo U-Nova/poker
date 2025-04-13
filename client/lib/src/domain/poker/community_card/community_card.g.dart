@@ -9,7 +9,7 @@ part of 'community_card.dart';
 _$CommunityCardImpl _$$CommunityCardImplFromJson(Map<String, dynamic> json) =>
     _$CommunityCardImpl(
       isOpen: json['isOpen'] as bool,
-      card: CommunityCard.fromJson(json['card'] as Map<String, dynamic>),
+      card: Card.fromJson(json['card'] as Map<String, dynamic>),
       order: $enumDecode(_$CommunityCardOrderEnumMap, json['order']),
     );
 

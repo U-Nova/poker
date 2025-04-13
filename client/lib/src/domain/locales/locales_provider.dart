@@ -1,4 +1,4 @@
-import 'package:client/src/adapter/locales_repository.dart';
+import 'package:client/src/application/locale/locales_repository.dart';
 import 'package:client/src/domain/locales/locales.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

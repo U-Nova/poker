@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'community_card.dart';
+part of 'community_card_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,59 +15,66 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-CommunityCard _$CommunityCardFromJson(Map<String, dynamic> json) {
-  return _CommunityCard.fromJson(json);
+CommunityCardDto _$CommunityCardDtoFromJson(Map<String, dynamic> json) {
+  return _CommunityCardDto.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CommunityCard {
+mixin _$CommunityCardDto {
+  String get gameId => throw _privateConstructorUsedError;
   bool get isOpen => throw _privateConstructorUsedError;
   Card get card => throw _privateConstructorUsedError;
   CommunityCardOrder get order => throw _privateConstructorUsedError;
 
-  /// Serializes this CommunityCard to a JSON map.
+  /// Serializes this CommunityCardDto to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of CommunityCard
+  /// Create a copy of CommunityCardDto
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityCardCopyWith<CommunityCard> get copyWith =>
+  $CommunityCardDtoCopyWith<CommunityCardDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CommunityCardCopyWith<$Res> {
-  factory $CommunityCardCopyWith(
-    CommunityCard value,
-    $Res Function(CommunityCard) then,
-  ) = _$CommunityCardCopyWithImpl<$Res, CommunityCard>;
+abstract class $CommunityCardDtoCopyWith<$Res> {
+  factory $CommunityCardDtoCopyWith(
+    CommunityCardDto value,
+    $Res Function(CommunityCardDto) then,
+  ) = _$CommunityCardDtoCopyWithImpl<$Res, CommunityCardDto>;
   @useResult
-  $Res call({bool isOpen, Card card, CommunityCardOrder order});
+  $Res call({String gameId, bool isOpen, Card card, CommunityCardOrder order});
 
   $CardCopyWith<$Res> get card;
 }
 
 /// @nodoc
-class _$CommunityCardCopyWithImpl<$Res, $Val extends CommunityCard>
-    implements $CommunityCardCopyWith<$Res> {
-  _$CommunityCardCopyWithImpl(this._value, this._then);
+class _$CommunityCardDtoCopyWithImpl<$Res, $Val extends CommunityCardDto>
+    implements $CommunityCardDtoCopyWith<$Res> {
+  _$CommunityCardDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CommunityCard
+  /// Create a copy of CommunityCardDto
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? gameId = null,
     Object? isOpen = null,
     Object? card = null,
     Object? order = null,
   }) {
     return _then(
       _value.copyWith(
+            gameId:
+                null == gameId
+                    ? _value.gameId
+                    : gameId // ignore: cast_nullable_to_non_nullable
+                        as String,
             isOpen:
                 null == isOpen
                     ? _value.isOpen
@@ -88,7 +95,7 @@ class _$CommunityCardCopyWithImpl<$Res, $Val extends CommunityCard>
     );
   }
 
-  /// Create a copy of CommunityCard
+  /// Create a copy of CommunityCardDto
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -100,40 +107,46 @@ class _$CommunityCardCopyWithImpl<$Res, $Val extends CommunityCard>
 }
 
 /// @nodoc
-abstract class _$$CommunityCardImplCopyWith<$Res>
-    implements $CommunityCardCopyWith<$Res> {
-  factory _$$CommunityCardImplCopyWith(
-    _$CommunityCardImpl value,
-    $Res Function(_$CommunityCardImpl) then,
-  ) = __$$CommunityCardImplCopyWithImpl<$Res>;
+abstract class _$$CommunityCardDtoImplCopyWith<$Res>
+    implements $CommunityCardDtoCopyWith<$Res> {
+  factory _$$CommunityCardDtoImplCopyWith(
+    _$CommunityCardDtoImpl value,
+    $Res Function(_$CommunityCardDtoImpl) then,
+  ) = __$$CommunityCardDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isOpen, Card card, CommunityCardOrder order});
+  $Res call({String gameId, bool isOpen, Card card, CommunityCardOrder order});
 
   @override
   $CardCopyWith<$Res> get card;
 }
 
 /// @nodoc
-class __$$CommunityCardImplCopyWithImpl<$Res>
-    extends _$CommunityCardCopyWithImpl<$Res, _$CommunityCardImpl>
-    implements _$$CommunityCardImplCopyWith<$Res> {
-  __$$CommunityCardImplCopyWithImpl(
-    _$CommunityCardImpl _value,
-    $Res Function(_$CommunityCardImpl) _then,
+class __$$CommunityCardDtoImplCopyWithImpl<$Res>
+    extends _$CommunityCardDtoCopyWithImpl<$Res, _$CommunityCardDtoImpl>
+    implements _$$CommunityCardDtoImplCopyWith<$Res> {
+  __$$CommunityCardDtoImplCopyWithImpl(
+    _$CommunityCardDtoImpl _value,
+    $Res Function(_$CommunityCardDtoImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of CommunityCard
+  /// Create a copy of CommunityCardDto
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? gameId = null,
     Object? isOpen = null,
     Object? card = null,
     Object? order = null,
   }) {
     return _then(
-      _$CommunityCardImpl(
+      _$CommunityCardDtoImpl(
+        gameId:
+            null == gameId
+                ? _value.gameId
+                : gameId // ignore: cast_nullable_to_non_nullable
+                    as String,
         isOpen:
             null == isOpen
                 ? _value.isOpen
@@ -156,16 +169,19 @@ class __$$CommunityCardImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CommunityCardImpl implements _CommunityCard {
-  const _$CommunityCardImpl({
+class _$CommunityCardDtoImpl implements _CommunityCardDto {
+  const _$CommunityCardDtoImpl({
+    required this.gameId,
     required this.isOpen,
     required this.card,
     required this.order,
   });
 
-  factory _$CommunityCardImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityCardImplFromJson(json);
+  factory _$CommunityCardDtoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunityCardDtoImplFromJson(json);
 
+  @override
+  final String gameId;
   @override
   final bool isOpen;
   @override
@@ -175,14 +191,15 @@ class _$CommunityCardImpl implements _CommunityCard {
 
   @override
   String toString() {
-    return 'CommunityCard(isOpen: $isOpen, card: $card, order: $order)';
+    return 'CommunityCardDto(gameId: $gameId, isOpen: $isOpen, card: $card, order: $order)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CommunityCardImpl &&
+            other is _$CommunityCardDtoImpl &&
+            (identical(other.gameId, gameId) || other.gameId == gameId) &&
             (identical(other.isOpen, isOpen) || other.isOpen == isOpen) &&
             (identical(other.card, card) || other.card == card) &&
             (identical(other.order, order) || other.order == order));
@@ -190,32 +207,38 @@ class _$CommunityCardImpl implements _CommunityCard {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, isOpen, card, order);
+  int get hashCode => Object.hash(runtimeType, gameId, isOpen, card, order);
 
-  /// Create a copy of CommunityCard
+  /// Create a copy of CommunityCardDto
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityCardImplCopyWith<_$CommunityCardImpl> get copyWith =>
-      __$$CommunityCardImplCopyWithImpl<_$CommunityCardImpl>(this, _$identity);
+  _$$CommunityCardDtoImplCopyWith<_$CommunityCardDtoImpl> get copyWith =>
+      __$$CommunityCardDtoImplCopyWithImpl<_$CommunityCardDtoImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommunityCardImplToJson(this);
+    return _$$CommunityCardDtoImplToJson(this);
   }
 }
 
-abstract class _CommunityCard implements CommunityCard {
-  const factory _CommunityCard({
+abstract class _CommunityCardDto implements CommunityCardDto {
+  const factory _CommunityCardDto({
+    required final String gameId,
     required final bool isOpen,
     required final Card card,
     required final CommunityCardOrder order,
-  }) = _$CommunityCardImpl;
+  }) = _$CommunityCardDtoImpl;
 
-  factory _CommunityCard.fromJson(Map<String, dynamic> json) =
-      _$CommunityCardImpl.fromJson;
+  factory _CommunityCardDto.fromJson(Map<String, dynamic> json) =
+      _$CommunityCardDtoImpl.fromJson;
 
+  @override
+  String get gameId;
   @override
   bool get isOpen;
   @override
@@ -223,10 +246,10 @@ abstract class _CommunityCard implements CommunityCard {
   @override
   CommunityCardOrder get order;
 
-  /// Create a copy of CommunityCard
+  /// Create a copy of CommunityCardDto
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityCardImplCopyWith<_$CommunityCardImpl> get copyWith =>
+  _$$CommunityCardDtoImplCopyWith<_$CommunityCardDtoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
