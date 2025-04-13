@@ -6,7 +6,7 @@ part of 'room.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RoomImpl _$$RoomImplFromJson(Map<String, dynamic> json) => _$RoomImpl(
+_Room _$RoomFromJson(Map<String, dynamic> json) => _Room(
   Games:
       (json['Games'] as List<dynamic>)
           .map((e) => Game.fromJson(e as Map<String, dynamic>))
@@ -16,10 +16,9 @@ _$RoomImpl _$$RoomImplFromJson(Map<String, dynamic> json) => _$RoomImpl(
   minimumBetAmount: (json['minimumBetAmount'] as num).toInt(),
 );
 
-Map<String, dynamic> _$$RoomImplToJson(_$RoomImpl instance) =>
-    <String, dynamic>{
-      'Games': instance.Games,
-      'limit': instance.limit,
-      'rate': instance.rate,
-      'minimumBetAmount': instance.minimumBetAmount,
-    };
+Map<String, dynamic> _$RoomToJson(_Room instance) => <String, dynamic>{
+  'Games': instance.Games,
+  'limit': instance.limit,
+  'rate': instance.rate,
+  'minimumBetAmount': instance.minimumBetAmount,
+};

@@ -7,8 +7,11 @@ part 'community_card_dto.freezed.dart';
 part 'community_card_dto.g.dart';
 
 @freezed
-class CommunityCardDto extends FirestoreDto with _$CommunityCardDto {
+abstract class CommunityCardDto
+    with _$CommunityCardDto
+    implements FirestoreDto {
   const factory CommunityCardDto({
+    @JsonKey(includeToJson: false, includeFromJson: true) required String id,
     required String gameId,
     required bool isOpen,
     required Card card,

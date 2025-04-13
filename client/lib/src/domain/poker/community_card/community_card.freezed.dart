@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,224 +10,163 @@ part of 'community_card.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-CommunityCard _$CommunityCardFromJson(Map<String, dynamic> json) {
-  return _CommunityCard.fromJson(json);
-}
 
 /// @nodoc
 mixin _$CommunityCard {
-  bool get isOpen => throw _privateConstructorUsedError;
-  Card get card => throw _privateConstructorUsedError;
-  CommunityCardOrder get order => throw _privateConstructorUsedError;
+
+ bool get isOpen; Card get card; CommunityCardOrder get order;
+/// Create a copy of CommunityCard
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CommunityCardCopyWith<CommunityCard> get copyWith => _$CommunityCardCopyWithImpl<CommunityCard>(this as CommunityCard, _$identity);
 
   /// Serializes this CommunityCard to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CommunityCard
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityCardCopyWith<CommunityCard> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityCard&&(identical(other.isOpen, isOpen) || other.isOpen == isOpen)&&(identical(other.card, card) || other.card == card)&&(identical(other.order, order) || other.order == order));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,isOpen,card,order);
+
+@override
+String toString() {
+  return 'CommunityCard(isOpen: $isOpen, card: $card, order: $order)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CommunityCardCopyWith<$Res> {
-  factory $CommunityCardCopyWith(
-    CommunityCard value,
-    $Res Function(CommunityCard) then,
-  ) = _$CommunityCardCopyWithImpl<$Res, CommunityCard>;
-  @useResult
-  $Res call({bool isOpen, Card card, CommunityCardOrder order});
+abstract mixin class $CommunityCardCopyWith<$Res>  {
+  factory $CommunityCardCopyWith(CommunityCard value, $Res Function(CommunityCard) _then) = _$CommunityCardCopyWithImpl;
+@useResult
+$Res call({
+ bool isOpen, Card card, CommunityCardOrder order
+});
 
-  $CardCopyWith<$Res> get card;
+
+$CardCopyWith<$Res> get card;
+
 }
-
 /// @nodoc
-class _$CommunityCardCopyWithImpl<$Res, $Val extends CommunityCard>
+class _$CommunityCardCopyWithImpl<$Res>
     implements $CommunityCardCopyWith<$Res> {
-  _$CommunityCardCopyWithImpl(this._value, this._then);
+  _$CommunityCardCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CommunityCard _self;
+  final $Res Function(CommunityCard) _then;
 
-  /// Create a copy of CommunityCard
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isOpen = null,
-    Object? card = null,
-    Object? order = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            isOpen:
-                null == isOpen
-                    ? _value.isOpen
-                    : isOpen // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            card:
-                null == card
-                    ? _value.card
-                    : card // ignore: cast_nullable_to_non_nullable
-                        as Card,
-            order:
-                null == order
-                    ? _value.order
-                    : order // ignore: cast_nullable_to_non_nullable
-                        as CommunityCardOrder,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of CommunityCard
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CardCopyWith<$Res> get card {
-    return $CardCopyWith<$Res>(_value.card, (value) {
-      return _then(_value.copyWith(card: value) as $Val);
-    });
-  }
+/// Create a copy of CommunityCard
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? isOpen = null,Object? card = null,Object? order = null,}) {
+  return _then(_self.copyWith(
+isOpen: null == isOpen ? _self.isOpen : isOpen // ignore: cast_nullable_to_non_nullable
+as bool,card: null == card ? _self.card : card // ignore: cast_nullable_to_non_nullable
+as Card,order: null == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as CommunityCardOrder,
+  ));
+}
+/// Create a copy of CommunityCard
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CardCopyWith<$Res> get card {
+  
+  return $CardCopyWith<$Res>(_self.card, (value) {
+    return _then(_self.copyWith(card: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$CommunityCardImplCopyWith<$Res>
-    implements $CommunityCardCopyWith<$Res> {
-  factory _$$CommunityCardImplCopyWith(
-    _$CommunityCardImpl value,
-    $Res Function(_$CommunityCardImpl) then,
-  ) = __$$CommunityCardImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({bool isOpen, Card card, CommunityCardOrder order});
-
-  @override
-  $CardCopyWith<$Res> get card;
-}
-
-/// @nodoc
-class __$$CommunityCardImplCopyWithImpl<$Res>
-    extends _$CommunityCardCopyWithImpl<$Res, _$CommunityCardImpl>
-    implements _$$CommunityCardImplCopyWith<$Res> {
-  __$$CommunityCardImplCopyWithImpl(
-    _$CommunityCardImpl _value,
-    $Res Function(_$CommunityCardImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CommunityCard
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isOpen = null,
-    Object? card = null,
-    Object? order = null,
-  }) {
-    return _then(
-      _$CommunityCardImpl(
-        isOpen:
-            null == isOpen
-                ? _value.isOpen
-                : isOpen // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        card:
-            null == card
-                ? _value.card
-                : card // ignore: cast_nullable_to_non_nullable
-                    as Card,
-        order:
-            null == order
-                ? _value.order
-                : order // ignore: cast_nullable_to_non_nullable
-                    as CommunityCardOrder,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$CommunityCardImpl implements _CommunityCard {
-  const _$CommunityCardImpl({
-    required this.isOpen,
-    required this.card,
-    required this.order,
+
+class _CommunityCard implements CommunityCard {
+  const _CommunityCard({required this.isOpen, required this.card, required this.order});
+  factory _CommunityCard.fromJson(Map<String, dynamic> json) => _$CommunityCardFromJson(json);
+
+@override final  bool isOpen;
+@override final  Card card;
+@override final  CommunityCardOrder order;
+
+/// Create a copy of CommunityCard
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CommunityCardCopyWith<_CommunityCard> get copyWith => __$CommunityCardCopyWithImpl<_CommunityCard>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$CommunityCardToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityCard&&(identical(other.isOpen, isOpen) || other.isOpen == isOpen)&&(identical(other.card, card) || other.card == card)&&(identical(other.order, order) || other.order == order));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,isOpen,card,order);
+
+@override
+String toString() {
+  return 'CommunityCard(isOpen: $isOpen, card: $card, order: $order)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CommunityCardCopyWith<$Res> implements $CommunityCardCopyWith<$Res> {
+  factory _$CommunityCardCopyWith(_CommunityCard value, $Res Function(_CommunityCard) _then) = __$CommunityCardCopyWithImpl;
+@override @useResult
+$Res call({
+ bool isOpen, Card card, CommunityCardOrder order
+});
+
+
+@override $CardCopyWith<$Res> get card;
+
+}
+/// @nodoc
+class __$CommunityCardCopyWithImpl<$Res>
+    implements _$CommunityCardCopyWith<$Res> {
+  __$CommunityCardCopyWithImpl(this._self, this._then);
+
+  final _CommunityCard _self;
+  final $Res Function(_CommunityCard) _then;
+
+/// Create a copy of CommunityCard
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? isOpen = null,Object? card = null,Object? order = null,}) {
+  return _then(_CommunityCard(
+isOpen: null == isOpen ? _self.isOpen : isOpen // ignore: cast_nullable_to_non_nullable
+as bool,card: null == card ? _self.card : card // ignore: cast_nullable_to_non_nullable
+as Card,order: null == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as CommunityCardOrder,
+  ));
+}
+
+/// Create a copy of CommunityCard
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CardCopyWith<$Res> get card {
+  
+  return $CardCopyWith<$Res>(_self.card, (value) {
+    return _then(_self.copyWith(card: value));
   });
-
-  factory _$CommunityCardImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityCardImplFromJson(json);
-
-  @override
-  final bool isOpen;
-  @override
-  final Card card;
-  @override
-  final CommunityCardOrder order;
-
-  @override
-  String toString() {
-    return 'CommunityCard(isOpen: $isOpen, card: $card, order: $order)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommunityCardImpl &&
-            (identical(other.isOpen, isOpen) || other.isOpen == isOpen) &&
-            (identical(other.card, card) || other.card == card) &&
-            (identical(other.order, order) || other.order == order));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, isOpen, card, order);
-
-  /// Create a copy of CommunityCard
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommunityCardImplCopyWith<_$CommunityCardImpl> get copyWith =>
-      __$$CommunityCardImplCopyWithImpl<_$CommunityCardImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CommunityCardImplToJson(this);
-  }
+}
 }
 
-abstract class _CommunityCard implements CommunityCard {
-  const factory _CommunityCard({
-    required final bool isOpen,
-    required final Card card,
-    required final CommunityCardOrder order,
-  }) = _$CommunityCardImpl;
-
-  factory _CommunityCard.fromJson(Map<String, dynamic> json) =
-      _$CommunityCardImpl.fromJson;
-
-  @override
-  bool get isOpen;
-  @override
-  Card get card;
-  @override
-  CommunityCardOrder get order;
-
-  /// Create a copy of CommunityCard
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityCardImplCopyWith<_$CommunityCardImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

@@ -6,7 +6,7 @@ part 'round.freezed.dart';
 part 'round.g.dart';
 
 @freezed
-class Round with _$Round {
+abstract class Round with _$Round {
   const factory Round({
     required String id,
     required RoundType roundType,

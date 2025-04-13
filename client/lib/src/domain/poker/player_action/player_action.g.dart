@@ -6,14 +6,14 @@ part of 'player_action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PlayerActionImpl _$$PlayerActionImplFromJson(Map<String, dynamic> json) =>
-    _$PlayerActionImpl(
+_PlayerAction _$PlayerActionFromJson(Map<String, dynamic> json) =>
+    _PlayerAction(
       playerId: json['playerId'] as String,
       actionType: $enumDecode(_$PlayerActionTypeEnumMap, json['actionType']),
       tipAmount: (json['tipAmount'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$PlayerActionImplToJson(_$PlayerActionImpl instance) =>
+Map<String, dynamic> _$PlayerActionToJson(_PlayerAction instance) =>
     <String, dynamic>{
       'playerId': instance.playerId,
       'actionType': _$PlayerActionTypeEnumMap[instance.actionType]!,

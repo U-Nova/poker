@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,222 +10,190 @@ part of 'seven_cards.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-SevenCards _$SevenCardsFromJson(Map<String, dynamic> json) {
-  return _SevenCards.fromJson(json);
-}
-
 /// @nodoc
-mixin _$SevenCards {
-  CommunityCards get communityCards => throw _privateConstructorUsedError;
-  HoleCards get holeCards => throw _privateConstructorUsedError;
+mixin _$SevenCards implements DiagnosticableTreeMixin {
+
+ CommunityCards get communityCards; HoleCards get holeCards;
+/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SevenCardsCopyWith<SevenCards> get copyWith => _$SevenCardsCopyWithImpl<SevenCards>(this as SevenCards, _$identity);
 
   /// Serializes this SevenCards to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $SevenCardsCopyWith<SevenCards> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  properties
+    ..add(DiagnosticsProperty('type', 'SevenCards'))
+    ..add(DiagnosticsProperty('communityCards', communityCards))..add(DiagnosticsProperty('holeCards', holeCards));
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SevenCards&&(identical(other.communityCards, communityCards) || other.communityCards == communityCards)&&(identical(other.holeCards, holeCards) || other.holeCards == holeCards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,communityCards,holeCards);
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+  return 'SevenCards(communityCards: $communityCards, holeCards: $holeCards)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $SevenCardsCopyWith<$Res> {
-  factory $SevenCardsCopyWith(
-    SevenCards value,
-    $Res Function(SevenCards) then,
-  ) = _$SevenCardsCopyWithImpl<$Res, SevenCards>;
-  @useResult
-  $Res call({CommunityCards communityCards, HoleCards holeCards});
+abstract mixin class $SevenCardsCopyWith<$Res>  {
+  factory $SevenCardsCopyWith(SevenCards value, $Res Function(SevenCards) _then) = _$SevenCardsCopyWithImpl;
+@useResult
+$Res call({
+ CommunityCards communityCards, HoleCards holeCards
+});
 
-  $CommunityCardsCopyWith<$Res> get communityCards;
-  $HoleCardsCopyWith<$Res> get holeCards;
+
+$CommunityCardsCopyWith<$Res> get communityCards;$HoleCardsCopyWith<$Res> get holeCards;
+
 }
-
 /// @nodoc
-class _$SevenCardsCopyWithImpl<$Res, $Val extends SevenCards>
+class _$SevenCardsCopyWithImpl<$Res>
     implements $SevenCardsCopyWith<$Res> {
-  _$SevenCardsCopyWithImpl(this._value, this._then);
+  _$SevenCardsCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SevenCards _self;
+  final $Res Function(SevenCards) _then;
 
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? communityCards = null, Object? holeCards = null}) {
-    return _then(
-      _value.copyWith(
-            communityCards:
-                null == communityCards
-                    ? _value.communityCards
-                    : communityCards // ignore: cast_nullable_to_non_nullable
-                        as CommunityCards,
-            holeCards:
-                null == holeCards
-                    ? _value.holeCards
-                    : holeCards // ignore: cast_nullable_to_non_nullable
-                        as HoleCards,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CommunityCardsCopyWith<$Res> get communityCards {
-    return $CommunityCardsCopyWith<$Res>(_value.communityCards, (value) {
-      return _then(_value.copyWith(communityCards: value) as $Val);
-    });
-  }
-
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $HoleCardsCopyWith<$Res> get holeCards {
-    return $HoleCardsCopyWith<$Res>(_value.holeCards, (value) {
-      return _then(_value.copyWith(holeCards: value) as $Val);
-    });
-  }
+/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? communityCards = null,Object? holeCards = null,}) {
+  return _then(_self.copyWith(
+communityCards: null == communityCards ? _self.communityCards : communityCards // ignore: cast_nullable_to_non_nullable
+as CommunityCards,holeCards: null == holeCards ? _self.holeCards : holeCards // ignore: cast_nullable_to_non_nullable
+as HoleCards,
+  ));
+}
+/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CommunityCardsCopyWith<$Res> get communityCards {
+  
+  return $CommunityCardsCopyWith<$Res>(_self.communityCards, (value) {
+    return _then(_self.copyWith(communityCards: value));
+  });
+}/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$HoleCardsCopyWith<$Res> get holeCards {
+  
+  return $HoleCardsCopyWith<$Res>(_self.holeCards, (value) {
+    return _then(_self.copyWith(holeCards: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$SevenCardsImplCopyWith<$Res>
-    implements $SevenCardsCopyWith<$Res> {
-  factory _$$SevenCardsImplCopyWith(
-    _$SevenCardsImpl value,
-    $Res Function(_$SevenCardsImpl) then,
-  ) = __$$SevenCardsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({CommunityCards communityCards, HoleCards holeCards});
-
-  @override
-  $CommunityCardsCopyWith<$Res> get communityCards;
-  @override
-  $HoleCardsCopyWith<$Res> get holeCards;
-}
-
-/// @nodoc
-class __$$SevenCardsImplCopyWithImpl<$Res>
-    extends _$SevenCardsCopyWithImpl<$Res, _$SevenCardsImpl>
-    implements _$$SevenCardsImplCopyWith<$Res> {
-  __$$SevenCardsImplCopyWithImpl(
-    _$SevenCardsImpl _value,
-    $Res Function(_$SevenCardsImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? communityCards = null, Object? holeCards = null}) {
-    return _then(
-      _$SevenCardsImpl(
-        communityCards:
-            null == communityCards
-                ? _value.communityCards
-                : communityCards // ignore: cast_nullable_to_non_nullable
-                    as CommunityCards,
-        holeCards:
-            null == holeCards
-                ? _value.holeCards
-                : holeCards // ignore: cast_nullable_to_non_nullable
-                    as HoleCards,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$SevenCardsImpl with DiagnosticableTreeMixin implements _SevenCards {
-  const _$SevenCardsImpl({
-    required this.communityCards,
-    required this.holeCards,
+
+class _SevenCards with DiagnosticableTreeMixin implements SevenCards {
+  const _SevenCards({required this.communityCards, required this.holeCards});
+  factory _SevenCards.fromJson(Map<String, dynamic> json) => _$SevenCardsFromJson(json);
+
+@override final  CommunityCards communityCards;
+@override final  HoleCards holeCards;
+
+/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$SevenCardsCopyWith<_SevenCards> get copyWith => __$SevenCardsCopyWithImpl<_SevenCards>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$SevenCardsToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  properties
+    ..add(DiagnosticsProperty('type', 'SevenCards'))
+    ..add(DiagnosticsProperty('communityCards', communityCards))..add(DiagnosticsProperty('holeCards', holeCards));
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SevenCards&&(identical(other.communityCards, communityCards) || other.communityCards == communityCards)&&(identical(other.holeCards, holeCards) || other.holeCards == holeCards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,communityCards,holeCards);
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+  return 'SevenCards(communityCards: $communityCards, holeCards: $holeCards)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$SevenCardsCopyWith<$Res> implements $SevenCardsCopyWith<$Res> {
+  factory _$SevenCardsCopyWith(_SevenCards value, $Res Function(_SevenCards) _then) = __$SevenCardsCopyWithImpl;
+@override @useResult
+$Res call({
+ CommunityCards communityCards, HoleCards holeCards
+});
+
+
+@override $CommunityCardsCopyWith<$Res> get communityCards;@override $HoleCardsCopyWith<$Res> get holeCards;
+
+}
+/// @nodoc
+class __$SevenCardsCopyWithImpl<$Res>
+    implements _$SevenCardsCopyWith<$Res> {
+  __$SevenCardsCopyWithImpl(this._self, this._then);
+
+  final _SevenCards _self;
+  final $Res Function(_SevenCards) _then;
+
+/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? communityCards = null,Object? holeCards = null,}) {
+  return _then(_SevenCards(
+communityCards: null == communityCards ? _self.communityCards : communityCards // ignore: cast_nullable_to_non_nullable
+as CommunityCards,holeCards: null == holeCards ? _self.holeCards : holeCards // ignore: cast_nullable_to_non_nullable
+as HoleCards,
+  ));
+}
+
+/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CommunityCardsCopyWith<$Res> get communityCards {
+  
+  return $CommunityCardsCopyWith<$Res>(_self.communityCards, (value) {
+    return _then(_self.copyWith(communityCards: value));
   });
-
-  factory _$SevenCardsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SevenCardsImplFromJson(json);
-
-  @override
-  final CommunityCards communityCards;
-  @override
-  final HoleCards holeCards;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SevenCards(communityCards: $communityCards, holeCards: $holeCards)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SevenCards'))
-      ..add(DiagnosticsProperty('communityCards', communityCards))
-      ..add(DiagnosticsProperty('holeCards', holeCards));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SevenCardsImpl &&
-            (identical(other.communityCards, communityCards) ||
-                other.communityCards == communityCards) &&
-            (identical(other.holeCards, holeCards) ||
-                other.holeCards == holeCards));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, communityCards, holeCards);
-
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SevenCardsImplCopyWith<_$SevenCardsImpl> get copyWith =>
-      __$$SevenCardsImplCopyWithImpl<_$SevenCardsImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SevenCardsImplToJson(this);
-  }
+}/// Create a copy of SevenCards
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$HoleCardsCopyWith<$Res> get holeCards {
+  
+  return $HoleCardsCopyWith<$Res>(_self.holeCards, (value) {
+    return _then(_self.copyWith(holeCards: value));
+  });
+}
 }
 
-abstract class _SevenCards implements SevenCards {
-  const factory _SevenCards({
-    required final CommunityCards communityCards,
-    required final HoleCards holeCards,
-  }) = _$SevenCardsImpl;
-
-  factory _SevenCards.fromJson(Map<String, dynamic> json) =
-      _$SevenCardsImpl.fromJson;
-
-  @override
-  CommunityCards get communityCards;
-  @override
-  HoleCards get holeCards;
-
-  /// Create a copy of SevenCards
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SevenCardsImplCopyWith<_$SevenCardsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

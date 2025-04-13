@@ -6,7 +6,7 @@ part 'deck.freezed.dart';
 part 'deck.g.dart';
 
 @freezed
-class Deck with _$Deck {
+abstract class Deck with _$Deck {
   const factory Deck({
     required CommunityCards communityCards,
     required List<HoleCards> holeCardsList,

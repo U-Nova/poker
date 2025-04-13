@@ -6,16 +6,15 @@ part of 'card.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CardImpl _$$CardImplFromJson(Map<String, dynamic> json) => _$CardImpl(
+_Card _$CardFromJson(Map<String, dynamic> json) => _Card(
   cardNumber: $enumDecode(_$CardNumberEnumMap, json['cardNumber']),
   cardSuit: $enumDecode(_$CardSuitEnumMap, json['cardSuit']),
 );
 
-Map<String, dynamic> _$$CardImplToJson(_$CardImpl instance) =>
-    <String, dynamic>{
-      'cardNumber': _$CardNumberEnumMap[instance.cardNumber]!,
-      'cardSuit': _$CardSuitEnumMap[instance.cardSuit]!,
-    };
+Map<String, dynamic> _$CardToJson(_Card instance) => <String, dynamic>{
+  'cardNumber': _$CardNumberEnumMap[instance.cardNumber]!,
+  'cardSuit': _$CardSuitEnumMap[instance.cardSuit]!,
+};
 
 const _$CardNumberEnumMap = {
   CardNumber.ace: '1',

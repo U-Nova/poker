@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,191 +10,148 @@ part of 'hole_cards.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-HoleCards _$HoleCardsFromJson(Map<String, dynamic> json) {
-  return _HoleCards.fromJson(json);
-}
 
 /// @nodoc
 mixin _$HoleCards {
-  String get playerId => throw _privateConstructorUsedError;
-  List<HoleCards> get cards => throw _privateConstructorUsedError;
+
+ String get playerId; List<HoleCards> get cards;
+/// Create a copy of HoleCards
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$HoleCardsCopyWith<HoleCards> get copyWith => _$HoleCardsCopyWithImpl<HoleCards>(this as HoleCards, _$identity);
 
   /// Serializes this HoleCards to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of HoleCards
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $HoleCardsCopyWith<HoleCards> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HoleCards&&(identical(other.playerId, playerId) || other.playerId == playerId)&&const DeepCollectionEquality().equals(other.cards, cards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,playerId,const DeepCollectionEquality().hash(cards));
+
+@override
+String toString() {
+  return 'HoleCards(playerId: $playerId, cards: $cards)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $HoleCardsCopyWith<$Res> {
-  factory $HoleCardsCopyWith(HoleCards value, $Res Function(HoleCards) then) =
-      _$HoleCardsCopyWithImpl<$Res, HoleCards>;
-  @useResult
-  $Res call({String playerId, List<HoleCards> cards});
-}
+abstract mixin class $HoleCardsCopyWith<$Res>  {
+  factory $HoleCardsCopyWith(HoleCards value, $Res Function(HoleCards) _then) = _$HoleCardsCopyWithImpl;
+@useResult
+$Res call({
+ String playerId, List<HoleCards> cards
+});
 
+
+
+
+}
 /// @nodoc
-class _$HoleCardsCopyWithImpl<$Res, $Val extends HoleCards>
+class _$HoleCardsCopyWithImpl<$Res>
     implements $HoleCardsCopyWith<$Res> {
-  _$HoleCardsCopyWithImpl(this._value, this._then);
+  _$HoleCardsCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final HoleCards _self;
+  final $Res Function(HoleCards) _then;
 
-  /// Create a copy of HoleCards
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? playerId = null, Object? cards = null}) {
-    return _then(
-      _value.copyWith(
-            playerId:
-                null == playerId
-                    ? _value.playerId
-                    : playerId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            cards:
-                null == cards
-                    ? _value.cards
-                    : cards // ignore: cast_nullable_to_non_nullable
-                        as List<HoleCards>,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of HoleCards
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? playerId = null,Object? cards = null,}) {
+  return _then(_self.copyWith(
+playerId: null == playerId ? _self.playerId : playerId // ignore: cast_nullable_to_non_nullable
+as String,cards: null == cards ? _self.cards : cards // ignore: cast_nullable_to_non_nullable
+as List<HoleCards>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$HoleCardsImplCopyWith<$Res>
-    implements $HoleCardsCopyWith<$Res> {
-  factory _$$HoleCardsImplCopyWith(
-    _$HoleCardsImpl value,
-    $Res Function(_$HoleCardsImpl) then,
-  ) = __$$HoleCardsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String playerId, List<HoleCards> cards});
 }
 
-/// @nodoc
-class __$$HoleCardsImplCopyWithImpl<$Res>
-    extends _$HoleCardsCopyWithImpl<$Res, _$HoleCardsImpl>
-    implements _$$HoleCardsImplCopyWith<$Res> {
-  __$$HoleCardsImplCopyWithImpl(
-    _$HoleCardsImpl _value,
-    $Res Function(_$HoleCardsImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of HoleCards
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? playerId = null, Object? cards = null}) {
-    return _then(
-      _$HoleCardsImpl(
-        playerId:
-            null == playerId
-                ? _value.playerId
-                : playerId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        cards:
-            null == cards
-                ? _value._cards
-                : cards // ignore: cast_nullable_to_non_nullable
-                    as List<HoleCards>,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$HoleCardsImpl implements _HoleCards {
-  const _$HoleCardsImpl({
-    required this.playerId,
-    required final List<HoleCards> cards,
-  }) : _cards = cards;
 
-  factory _$HoleCardsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$HoleCardsImplFromJson(json);
+class _HoleCards implements HoleCards {
+  const _HoleCards({required this.playerId, required final  List<HoleCards> cards}): _cards = cards;
+  factory _HoleCards.fromJson(Map<String, dynamic> json) => _$HoleCardsFromJson(json);
 
-  @override
-  final String playerId;
-  final List<HoleCards> _cards;
-  @override
-  List<HoleCards> get cards {
-    if (_cards is EqualUnmodifiableListView) return _cards;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_cards);
-  }
-
-  @override
-  String toString() {
-    return 'HoleCards(playerId: $playerId, cards: $cards)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$HoleCardsImpl &&
-            (identical(other.playerId, playerId) ||
-                other.playerId == playerId) &&
-            const DeepCollectionEquality().equals(other._cards, _cards));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    playerId,
-    const DeepCollectionEquality().hash(_cards),
-  );
-
-  /// Create a copy of HoleCards
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$HoleCardsImplCopyWith<_$HoleCardsImpl> get copyWith =>
-      __$$HoleCardsImplCopyWithImpl<_$HoleCardsImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$HoleCardsImplToJson(this);
-  }
+@override final  String playerId;
+ final  List<HoleCards> _cards;
+@override List<HoleCards> get cards {
+  if (_cards is EqualUnmodifiableListView) return _cards;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_cards);
 }
 
-abstract class _HoleCards implements HoleCards {
-  const factory _HoleCards({
-    required final String playerId,
-    required final List<HoleCards> cards,
-  }) = _$HoleCardsImpl;
 
-  factory _HoleCards.fromJson(Map<String, dynamic> json) =
-      _$HoleCardsImpl.fromJson;
+/// Create a copy of HoleCards
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$HoleCardsCopyWith<_HoleCards> get copyWith => __$HoleCardsCopyWithImpl<_HoleCards>(this, _$identity);
 
-  @override
-  String get playerId;
-  @override
-  List<HoleCards> get cards;
-
-  /// Create a copy of HoleCards
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HoleCardsImplCopyWith<_$HoleCardsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$HoleCardsToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HoleCards&&(identical(other.playerId, playerId) || other.playerId == playerId)&&const DeepCollectionEquality().equals(other._cards, _cards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,playerId,const DeepCollectionEquality().hash(_cards));
+
+@override
+String toString() {
+  return 'HoleCards(playerId: $playerId, cards: $cards)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$HoleCardsCopyWith<$Res> implements $HoleCardsCopyWith<$Res> {
+  factory _$HoleCardsCopyWith(_HoleCards value, $Res Function(_HoleCards) _then) = __$HoleCardsCopyWithImpl;
+@override @useResult
+$Res call({
+ String playerId, List<HoleCards> cards
+});
+
+
+
+
+}
+/// @nodoc
+class __$HoleCardsCopyWithImpl<$Res>
+    implements _$HoleCardsCopyWith<$Res> {
+  __$HoleCardsCopyWithImpl(this._self, this._then);
+
+  final _HoleCards _self;
+  final $Res Function(_HoleCards) _then;
+
+/// Create a copy of HoleCards
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? playerId = null,Object? cards = null,}) {
+  return _then(_HoleCards(
+playerId: null == playerId ? _self.playerId : playerId // ignore: cast_nullable_to_non_nullable
+as String,cards: null == cards ? _self._cards : cards // ignore: cast_nullable_to_non_nullable
+as List<HoleCards>,
+  ));
+}
+
+
+}
+
+// dart format on

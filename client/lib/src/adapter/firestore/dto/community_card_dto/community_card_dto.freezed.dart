@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,247 +10,169 @@ part of 'community_card_dto.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-CommunityCardDto _$CommunityCardDtoFromJson(Map<String, dynamic> json) {
-  return _CommunityCardDto.fromJson(json);
-}
 
 /// @nodoc
 mixin _$CommunityCardDto {
-  String get gameId => throw _privateConstructorUsedError;
-  bool get isOpen => throw _privateConstructorUsedError;
-  Card get card => throw _privateConstructorUsedError;
-  CommunityCardOrder get order => throw _privateConstructorUsedError;
+
+@JsonKey(includeToJson: false, includeFromJson: true) String get id; String get gameId; bool get isOpen; Card get card; CommunityCardOrder get order;
+/// Create a copy of CommunityCardDto
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CommunityCardDtoCopyWith<CommunityCardDto> get copyWith => _$CommunityCardDtoCopyWithImpl<CommunityCardDto>(this as CommunityCardDto, _$identity);
 
   /// Serializes this CommunityCardDto to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CommunityCardDto
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityCardDtoCopyWith<CommunityCardDto> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityCardDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.isOpen, isOpen) || other.isOpen == isOpen)&&(identical(other.card, card) || other.card == card)&&(identical(other.order, order) || other.order == order));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,gameId,isOpen,card,order);
+
+@override
+String toString() {
+  return 'CommunityCardDto(id: $id, gameId: $gameId, isOpen: $isOpen, card: $card, order: $order)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CommunityCardDtoCopyWith<$Res> {
-  factory $CommunityCardDtoCopyWith(
-    CommunityCardDto value,
-    $Res Function(CommunityCardDto) then,
-  ) = _$CommunityCardDtoCopyWithImpl<$Res, CommunityCardDto>;
-  @useResult
-  $Res call({String gameId, bool isOpen, Card card, CommunityCardOrder order});
+abstract mixin class $CommunityCardDtoCopyWith<$Res>  {
+  factory $CommunityCardDtoCopyWith(CommunityCardDto value, $Res Function(CommunityCardDto) _then) = _$CommunityCardDtoCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, bool isOpen, Card card, CommunityCardOrder order
+});
 
-  $CardCopyWith<$Res> get card;
+
+$CardCopyWith<$Res> get card;
+
 }
-
 /// @nodoc
-class _$CommunityCardDtoCopyWithImpl<$Res, $Val extends CommunityCardDto>
+class _$CommunityCardDtoCopyWithImpl<$Res>
     implements $CommunityCardDtoCopyWith<$Res> {
-  _$CommunityCardDtoCopyWithImpl(this._value, this._then);
+  _$CommunityCardDtoCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CommunityCardDto _self;
+  final $Res Function(CommunityCardDto) _then;
 
-  /// Create a copy of CommunityCardDto
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gameId = null,
-    Object? isOpen = null,
-    Object? card = null,
-    Object? order = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            gameId:
-                null == gameId
-                    ? _value.gameId
-                    : gameId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            isOpen:
-                null == isOpen
-                    ? _value.isOpen
-                    : isOpen // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            card:
-                null == card
-                    ? _value.card
-                    : card // ignore: cast_nullable_to_non_nullable
-                        as Card,
-            order:
-                null == order
-                    ? _value.order
-                    : order // ignore: cast_nullable_to_non_nullable
-                        as CommunityCardOrder,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of CommunityCardDto
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CardCopyWith<$Res> get card {
-    return $CardCopyWith<$Res>(_value.card, (value) {
-      return _then(_value.copyWith(card: value) as $Val);
-    });
-  }
+/// Create a copy of CommunityCardDto
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? gameId = null,Object? isOpen = null,Object? card = null,Object? order = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
+as String,isOpen: null == isOpen ? _self.isOpen : isOpen // ignore: cast_nullable_to_non_nullable
+as bool,card: null == card ? _self.card : card // ignore: cast_nullable_to_non_nullable
+as Card,order: null == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as CommunityCardOrder,
+  ));
+}
+/// Create a copy of CommunityCardDto
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CardCopyWith<$Res> get card {
+  
+  return $CardCopyWith<$Res>(_self.card, (value) {
+    return _then(_self.copyWith(card: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$CommunityCardDtoImplCopyWith<$Res>
-    implements $CommunityCardDtoCopyWith<$Res> {
-  factory _$$CommunityCardDtoImplCopyWith(
-    _$CommunityCardDtoImpl value,
-    $Res Function(_$CommunityCardDtoImpl) then,
-  ) = __$$CommunityCardDtoImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String gameId, bool isOpen, Card card, CommunityCardOrder order});
-
-  @override
-  $CardCopyWith<$Res> get card;
-}
-
-/// @nodoc
-class __$$CommunityCardDtoImplCopyWithImpl<$Res>
-    extends _$CommunityCardDtoCopyWithImpl<$Res, _$CommunityCardDtoImpl>
-    implements _$$CommunityCardDtoImplCopyWith<$Res> {
-  __$$CommunityCardDtoImplCopyWithImpl(
-    _$CommunityCardDtoImpl _value,
-    $Res Function(_$CommunityCardDtoImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CommunityCardDto
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gameId = null,
-    Object? isOpen = null,
-    Object? card = null,
-    Object? order = null,
-  }) {
-    return _then(
-      _$CommunityCardDtoImpl(
-        gameId:
-            null == gameId
-                ? _value.gameId
-                : gameId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        isOpen:
-            null == isOpen
-                ? _value.isOpen
-                : isOpen // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        card:
-            null == card
-                ? _value.card
-                : card // ignore: cast_nullable_to_non_nullable
-                    as Card,
-        order:
-            null == order
-                ? _value.order
-                : order // ignore: cast_nullable_to_non_nullable
-                    as CommunityCardOrder,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$CommunityCardDtoImpl implements _CommunityCardDto {
-  const _$CommunityCardDtoImpl({
-    required this.gameId,
-    required this.isOpen,
-    required this.card,
-    required this.order,
+
+class _CommunityCardDto implements CommunityCardDto {
+  const _CommunityCardDto({@JsonKey(includeToJson: false, includeFromJson: true) required this.id, required this.gameId, required this.isOpen, required this.card, required this.order});
+  factory _CommunityCardDto.fromJson(Map<String, dynamic> json) => _$CommunityCardDtoFromJson(json);
+
+@override@JsonKey(includeToJson: false, includeFromJson: true) final  String id;
+@override final  String gameId;
+@override final  bool isOpen;
+@override final  Card card;
+@override final  CommunityCardOrder order;
+
+/// Create a copy of CommunityCardDto
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CommunityCardDtoCopyWith<_CommunityCardDto> get copyWith => __$CommunityCardDtoCopyWithImpl<_CommunityCardDto>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$CommunityCardDtoToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityCardDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.isOpen, isOpen) || other.isOpen == isOpen)&&(identical(other.card, card) || other.card == card)&&(identical(other.order, order) || other.order == order));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,gameId,isOpen,card,order);
+
+@override
+String toString() {
+  return 'CommunityCardDto(id: $id, gameId: $gameId, isOpen: $isOpen, card: $card, order: $order)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CommunityCardDtoCopyWith<$Res> implements $CommunityCardDtoCopyWith<$Res> {
+  factory _$CommunityCardDtoCopyWith(_CommunityCardDto value, $Res Function(_CommunityCardDto) _then) = __$CommunityCardDtoCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, bool isOpen, Card card, CommunityCardOrder order
+});
+
+
+@override $CardCopyWith<$Res> get card;
+
+}
+/// @nodoc
+class __$CommunityCardDtoCopyWithImpl<$Res>
+    implements _$CommunityCardDtoCopyWith<$Res> {
+  __$CommunityCardDtoCopyWithImpl(this._self, this._then);
+
+  final _CommunityCardDto _self;
+  final $Res Function(_CommunityCardDto) _then;
+
+/// Create a copy of CommunityCardDto
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? gameId = null,Object? isOpen = null,Object? card = null,Object? order = null,}) {
+  return _then(_CommunityCardDto(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
+as String,isOpen: null == isOpen ? _self.isOpen : isOpen // ignore: cast_nullable_to_non_nullable
+as bool,card: null == card ? _self.card : card // ignore: cast_nullable_to_non_nullable
+as Card,order: null == order ? _self.order : order // ignore: cast_nullable_to_non_nullable
+as CommunityCardOrder,
+  ));
+}
+
+/// Create a copy of CommunityCardDto
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$CardCopyWith<$Res> get card {
+  
+  return $CardCopyWith<$Res>(_self.card, (value) {
+    return _then(_self.copyWith(card: value));
   });
-
-  factory _$CommunityCardDtoImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityCardDtoImplFromJson(json);
-
-  @override
-  final String gameId;
-  @override
-  final bool isOpen;
-  @override
-  final Card card;
-  @override
-  final CommunityCardOrder order;
-
-  @override
-  String toString() {
-    return 'CommunityCardDto(gameId: $gameId, isOpen: $isOpen, card: $card, order: $order)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommunityCardDtoImpl &&
-            (identical(other.gameId, gameId) || other.gameId == gameId) &&
-            (identical(other.isOpen, isOpen) || other.isOpen == isOpen) &&
-            (identical(other.card, card) || other.card == card) &&
-            (identical(other.order, order) || other.order == order));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, gameId, isOpen, card, order);
-
-  /// Create a copy of CommunityCardDto
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommunityCardDtoImplCopyWith<_$CommunityCardDtoImpl> get copyWith =>
-      __$$CommunityCardDtoImplCopyWithImpl<_$CommunityCardDtoImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CommunityCardDtoImplToJson(this);
-  }
+}
 }
 
-abstract class _CommunityCardDto implements CommunityCardDto {
-  const factory _CommunityCardDto({
-    required final String gameId,
-    required final bool isOpen,
-    required final Card card,
-    required final CommunityCardOrder order,
-  }) = _$CommunityCardDtoImpl;
-
-  factory _CommunityCardDto.fromJson(Map<String, dynamic> json) =
-      _$CommunityCardDtoImpl.fromJson;
-
-  @override
-  String get gameId;
-  @override
-  bool get isOpen;
-  @override
-  Card get card;
-  @override
-  CommunityCardOrder get order;
-
-  /// Create a copy of CommunityCardDto
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityCardDtoImplCopyWith<_$CommunityCardDtoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

@@ -6,7 +6,7 @@ part of 'player.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PlayerImpl _$$PlayerImplFromJson(Map<String, dynamic> json) => _$PlayerImpl(
+_Player _$PlayerFromJson(Map<String, dynamic> json) => _Player(
   id: json['id'] as String,
   userId: json['userId'] as String,
   order: (json['order'] as num).toInt(),
@@ -14,11 +14,10 @@ _$PlayerImpl _$$PlayerImplFromJson(Map<String, dynamic> json) => _$PlayerImpl(
   tip: (json['tip'] as num).toInt(),
 );
 
-Map<String, dynamic> _$$PlayerImplToJson(_$PlayerImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'userId': instance.userId,
-      'order': instance.order,
-      'holdCards': instance.holdCards,
-      'tip': instance.tip,
-    };
+Map<String, dynamic> _$PlayerToJson(_Player instance) => <String, dynamic>{
+  'id': instance.id,
+  'userId': instance.userId,
+  'order': instance.order,
+  'holdCards': instance.holdCards,
+  'tip': instance.tip,
+};

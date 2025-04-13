@@ -6,23 +6,22 @@ part of 'community_card_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommunityCardDtoImpl _$$CommunityCardDtoImplFromJson(
-  Map<String, dynamic> json,
-) => _$CommunityCardDtoImpl(
-  gameId: json['gameId'] as String,
-  isOpen: json['isOpen'] as bool,
-  card: Card.fromJson(json['card'] as Map<String, dynamic>),
-  order: $enumDecode(_$CommunityCardOrderEnumMap, json['order']),
-);
+_CommunityCardDto _$CommunityCardDtoFromJson(Map<String, dynamic> json) =>
+    _CommunityCardDto(
+      id: json['id'] as String,
+      gameId: json['gameId'] as String,
+      isOpen: json['isOpen'] as bool,
+      card: Card.fromJson(json['card'] as Map<String, dynamic>),
+      order: $enumDecode(_$CommunityCardOrderEnumMap, json['order']),
+    );
 
-Map<String, dynamic> _$$CommunityCardDtoImplToJson(
-  _$CommunityCardDtoImpl instance,
-) => <String, dynamic>{
-  'gameId': instance.gameId,
-  'isOpen': instance.isOpen,
-  'card': instance.card,
-  'order': _$CommunityCardOrderEnumMap[instance.order]!,
-};
+Map<String, dynamic> _$CommunityCardDtoToJson(_CommunityCardDto instance) =>
+    <String, dynamic>{
+      'gameId': instance.gameId,
+      'isOpen': instance.isOpen,
+      'card': instance.card,
+      'order': _$CommunityCardOrderEnumMap[instance.order]!,
+    };
 
 const _$CommunityCardOrderEnumMap = {
   CommunityCardOrder.flop: 'flop',

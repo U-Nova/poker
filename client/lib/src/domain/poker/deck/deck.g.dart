@@ -6,7 +6,7 @@ part of 'deck.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DeckImpl _$$DeckImplFromJson(Map<String, dynamic> json) => _$DeckImpl(
+_Deck _$DeckFromJson(Map<String, dynamic> json) => _Deck(
   communityCards: CommunityCards.fromJson(
     json['communityCards'] as Map<String, dynamic>,
   ),
@@ -16,8 +16,7 @@ _$DeckImpl _$$DeckImplFromJson(Map<String, dynamic> json) => _$DeckImpl(
           .toList(),
 );
 
-Map<String, dynamic> _$$DeckImplToJson(_$DeckImpl instance) =>
-    <String, dynamic>{
-      'communityCards': instance.communityCards,
-      'holeCardsList': instance.holeCardsList,
-    };
+Map<String, dynamic> _$DeckToJson(_Deck instance) => <String, dynamic>{
+  'communityCards': instance.communityCards,
+  'holeCardsList': instance.holeCardsList,
+};

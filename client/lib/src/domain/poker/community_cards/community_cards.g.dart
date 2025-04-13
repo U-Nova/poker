@@ -6,14 +6,13 @@ part of 'community_cards.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommunityCardsImpl _$$CommunityCardsImplFromJson(Map<String, dynamic> json) =>
-    _$CommunityCardsImpl(
+_CommunityCards _$CommunityCardsFromJson(Map<String, dynamic> json) =>
+    _CommunityCards(
       communityCards:
           (json['communityCards'] as List<dynamic>)
               .map((e) => CommunityCard.fromJson(e as Map<String, dynamic>))
               .toList(),
     );
 
-Map<String, dynamic> _$$CommunityCardsImplToJson(
-  _$CommunityCardsImpl instance,
-) => <String, dynamic>{'communityCards': instance.communityCards};
+Map<String, dynamic> _$CommunityCardsToJson(_CommunityCards instance) =>
+    <String, dynamic>{'communityCards': instance.communityCards};

@@ -7,7 +7,7 @@ part 'seven_cards.freezed.dart';
 part 'seven_cards.g.dart';
 
 @freezed
-class SevenCards with _$SevenCards {
+abstract class SevenCards with _$SevenCards {
   const factory SevenCards({
     required CommunityCards communityCards,
     required HoleCards holeCards,

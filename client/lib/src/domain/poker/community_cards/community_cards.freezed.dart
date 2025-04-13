@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,179 +10,145 @@ part of 'community_cards.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-CommunityCards _$CommunityCardsFromJson(Map<String, dynamic> json) {
-  return _CommunityCards.fromJson(json);
-}
 
 /// @nodoc
 mixin _$CommunityCards {
-  List<CommunityCard> get communityCards => throw _privateConstructorUsedError;
+
+ List<CommunityCard> get communityCards;
+/// Create a copy of CommunityCards
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CommunityCardsCopyWith<CommunityCards> get copyWith => _$CommunityCardsCopyWithImpl<CommunityCards>(this as CommunityCards, _$identity);
 
   /// Serializes this CommunityCards to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CommunityCards
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityCardsCopyWith<CommunityCards> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityCards&&const DeepCollectionEquality().equals(other.communityCards, communityCards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(communityCards));
+
+@override
+String toString() {
+  return 'CommunityCards(communityCards: $communityCards)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CommunityCardsCopyWith<$Res> {
-  factory $CommunityCardsCopyWith(
-    CommunityCards value,
-    $Res Function(CommunityCards) then,
-  ) = _$CommunityCardsCopyWithImpl<$Res, CommunityCards>;
-  @useResult
-  $Res call({List<CommunityCard> communityCards});
-}
+abstract mixin class $CommunityCardsCopyWith<$Res>  {
+  factory $CommunityCardsCopyWith(CommunityCards value, $Res Function(CommunityCards) _then) = _$CommunityCardsCopyWithImpl;
+@useResult
+$Res call({
+ List<CommunityCard> communityCards
+});
 
+
+
+
+}
 /// @nodoc
-class _$CommunityCardsCopyWithImpl<$Res, $Val extends CommunityCards>
+class _$CommunityCardsCopyWithImpl<$Res>
     implements $CommunityCardsCopyWith<$Res> {
-  _$CommunityCardsCopyWithImpl(this._value, this._then);
+  _$CommunityCardsCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final CommunityCards _self;
+  final $Res Function(CommunityCards) _then;
 
-  /// Create a copy of CommunityCards
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? communityCards = null}) {
-    return _then(
-      _value.copyWith(
-            communityCards:
-                null == communityCards
-                    ? _value.communityCards
-                    : communityCards // ignore: cast_nullable_to_non_nullable
-                        as List<CommunityCard>,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of CommunityCards
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? communityCards = null,}) {
+  return _then(_self.copyWith(
+communityCards: null == communityCards ? _self.communityCards : communityCards // ignore: cast_nullable_to_non_nullable
+as List<CommunityCard>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$CommunityCardsImplCopyWith<$Res>
-    implements $CommunityCardsCopyWith<$Res> {
-  factory _$$CommunityCardsImplCopyWith(
-    _$CommunityCardsImpl value,
-    $Res Function(_$CommunityCardsImpl) then,
-  ) = __$$CommunityCardsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({List<CommunityCard> communityCards});
 }
 
-/// @nodoc
-class __$$CommunityCardsImplCopyWithImpl<$Res>
-    extends _$CommunityCardsCopyWithImpl<$Res, _$CommunityCardsImpl>
-    implements _$$CommunityCardsImplCopyWith<$Res> {
-  __$$CommunityCardsImplCopyWithImpl(
-    _$CommunityCardsImpl _value,
-    $Res Function(_$CommunityCardsImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CommunityCards
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? communityCards = null}) {
-    return _then(
-      _$CommunityCardsImpl(
-        communityCards:
-            null == communityCards
-                ? _value._communityCards
-                : communityCards // ignore: cast_nullable_to_non_nullable
-                    as List<CommunityCard>,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$CommunityCardsImpl implements _CommunityCards {
-  const _$CommunityCardsImpl({
-    required final List<CommunityCard> communityCards,
-  }) : _communityCards = communityCards;
 
-  factory _$CommunityCardsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityCardsImplFromJson(json);
+class _CommunityCards implements CommunityCards {
+  const _CommunityCards({required final  List<CommunityCard> communityCards}): _communityCards = communityCards;
+  factory _CommunityCards.fromJson(Map<String, dynamic> json) => _$CommunityCardsFromJson(json);
 
-  final List<CommunityCard> _communityCards;
-  @override
-  List<CommunityCard> get communityCards {
-    if (_communityCards is EqualUnmodifiableListView) return _communityCards;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_communityCards);
-  }
-
-  @override
-  String toString() {
-    return 'CommunityCards(communityCards: $communityCards)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommunityCardsImpl &&
-            const DeepCollectionEquality().equals(
-              other._communityCards,
-              _communityCards,
-            ));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_communityCards),
-  );
-
-  /// Create a copy of CommunityCards
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommunityCardsImplCopyWith<_$CommunityCardsImpl> get copyWith =>
-      __$$CommunityCardsImplCopyWithImpl<_$CommunityCardsImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CommunityCardsImplToJson(this);
-  }
+ final  List<CommunityCard> _communityCards;
+@override List<CommunityCard> get communityCards {
+  if (_communityCards is EqualUnmodifiableListView) return _communityCards;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_communityCards);
 }
 
-abstract class _CommunityCards implements CommunityCards {
-  const factory _CommunityCards({
-    required final List<CommunityCard> communityCards,
-  }) = _$CommunityCardsImpl;
 
-  factory _CommunityCards.fromJson(Map<String, dynamic> json) =
-      _$CommunityCardsImpl.fromJson;
+/// Create a copy of CommunityCards
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CommunityCardsCopyWith<_CommunityCards> get copyWith => __$CommunityCardsCopyWithImpl<_CommunityCards>(this, _$identity);
 
-  @override
-  List<CommunityCard> get communityCards;
-
-  /// Create a copy of CommunityCards
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityCardsImplCopyWith<_$CommunityCardsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$CommunityCardsToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityCards&&const DeepCollectionEquality().equals(other._communityCards, _communityCards));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_communityCards));
+
+@override
+String toString() {
+  return 'CommunityCards(communityCards: $communityCards)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CommunityCardsCopyWith<$Res> implements $CommunityCardsCopyWith<$Res> {
+  factory _$CommunityCardsCopyWith(_CommunityCards value, $Res Function(_CommunityCards) _then) = __$CommunityCardsCopyWithImpl;
+@override @useResult
+$Res call({
+ List<CommunityCard> communityCards
+});
+
+
+
+
+}
+/// @nodoc
+class __$CommunityCardsCopyWithImpl<$Res>
+    implements _$CommunityCardsCopyWith<$Res> {
+  __$CommunityCardsCopyWithImpl(this._self, this._then);
+
+  final _CommunityCards _self;
+  final $Res Function(_CommunityCards) _then;
+
+/// Create a copy of CommunityCards
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? communityCards = null,}) {
+  return _then(_CommunityCards(
+communityCards: null == communityCards ? _self._communityCards : communityCards // ignore: cast_nullable_to_non_nullable
+as List<CommunityCard>,
+  ));
+}
+
+
+}
+
+// dart format on

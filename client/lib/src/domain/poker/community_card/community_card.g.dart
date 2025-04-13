@@ -6,14 +6,14 @@ part of 'community_card.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommunityCardImpl _$$CommunityCardImplFromJson(Map<String, dynamic> json) =>
-    _$CommunityCardImpl(
+_CommunityCard _$CommunityCardFromJson(Map<String, dynamic> json) =>
+    _CommunityCard(
       isOpen: json['isOpen'] as bool,
       card: Card.fromJson(json['card'] as Map<String, dynamic>),
       order: $enumDecode(_$CommunityCardOrderEnumMap, json['order']),
     );
 
-Map<String, dynamic> _$$CommunityCardImplToJson(_$CommunityCardImpl instance) =>
+Map<String, dynamic> _$CommunityCardToJson(_CommunityCard instance) =>
     <String, dynamic>{
       'isOpen': instance.isOpen,
       'card': instance.card,

@@ -6,7 +6,7 @@ part 'card.freezed.dart';
 part 'card.g.dart';
 
 @freezed
-class Card with _$Card {
+abstract class Card with _$Card {
   /// getterを実装する場合は必要らしい @see https://qiita.com/imajoriri/items/84e1fc3674d5c9835938
   const Card._();
   const factory Card({

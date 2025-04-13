@@ -5,7 +5,7 @@ part 'player_action.freezed.dart';
 part 'player_action.g.dart';
 
 @freezed
-class PlayerAction with _$PlayerAction {
+abstract class PlayerAction with _$PlayerAction {
   const factory PlayerAction({
     required String playerId,
     required PlayerActionType actionType,

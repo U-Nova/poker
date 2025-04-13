@@ -5,7 +5,7 @@ part 'player_turn.freezed.dart';
 part 'player_turn.g.dart';
 
 @freezed
-class PlayerTurn with _$PlayerTurn {
+abstract class PlayerTurn with _$PlayerTurn {
   const factory PlayerTurn({
     //項目は仮
     required String playerId,

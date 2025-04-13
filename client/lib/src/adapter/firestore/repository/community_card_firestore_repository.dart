@@ -17,4 +17,12 @@ class CommunityCardFirestoreRepository
     final snapshot = await collectionRef().get();
     return snapshot.docs.map((row) => row.data()).toList();
   }
+
+  Future<void> save(CommunityCardDto dto) async {
+    await collectionRef().add(dto);
+  }
+
+  Future<void> update(CommunityCardDto dto) async {
+    // await collectionRef().;
+  }
 }

@@ -5,7 +5,7 @@ part 'community_cards.freezed.dart';
 part 'community_cards.g.dart';
 
 @freezed
-class CommunityCards with _$CommunityCards {
+abstract class CommunityCards with _$CommunityCards {
   const factory CommunityCards({
     required List<CommunityCard> communityCards,
   }) = _CommunityCards;

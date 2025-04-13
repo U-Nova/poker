@@ -1,4 +1,5 @@
 import 'package:client/src/application/abstract_usecase.dart';
+import 'package:client/src/application/poker/sample_usecase.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final startGameUsecaseProvider =
@@ -14,6 +15,8 @@ class StartGameUsecase extends AbstractUsecase<String, String> {
   Future<String> execute(String req) async {
     // TODO: ここで色々処理を実装する
     print('ゲームを開始しました');
+    await _ref.read(sampleUsecaseProvider).execute(req);
+
     await Future.delayed(Duration(seconds: 1));
     return '';
   }

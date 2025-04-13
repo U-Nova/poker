@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,212 +10,145 @@ part of 'player_action.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-PlayerAction _$PlayerActionFromJson(Map<String, dynamic> json) {
-  return _PlayerAction.fromJson(json);
-}
 
 /// @nodoc
 mixin _$PlayerAction {
-  String get playerId => throw _privateConstructorUsedError;
-  PlayerActionType get actionType => throw _privateConstructorUsedError;
-  int get tipAmount => throw _privateConstructorUsedError;
+
+ String get playerId; PlayerActionType get actionType; int get tipAmount;
+/// Create a copy of PlayerAction
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PlayerActionCopyWith<PlayerAction> get copyWith => _$PlayerActionCopyWithImpl<PlayerAction>(this as PlayerAction, _$identity);
 
   /// Serializes this PlayerAction to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of PlayerAction
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlayerActionCopyWith<PlayerAction> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PlayerAction&&(identical(other.playerId, playerId) || other.playerId == playerId)&&(identical(other.actionType, actionType) || other.actionType == actionType)&&(identical(other.tipAmount, tipAmount) || other.tipAmount == tipAmount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,playerId,actionType,tipAmount);
+
+@override
+String toString() {
+  return 'PlayerAction(playerId: $playerId, actionType: $actionType, tipAmount: $tipAmount)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PlayerActionCopyWith<$Res> {
-  factory $PlayerActionCopyWith(
-    PlayerAction value,
-    $Res Function(PlayerAction) then,
-  ) = _$PlayerActionCopyWithImpl<$Res, PlayerAction>;
-  @useResult
-  $Res call({String playerId, PlayerActionType actionType, int tipAmount});
-}
+abstract mixin class $PlayerActionCopyWith<$Res>  {
+  factory $PlayerActionCopyWith(PlayerAction value, $Res Function(PlayerAction) _then) = _$PlayerActionCopyWithImpl;
+@useResult
+$Res call({
+ String playerId, PlayerActionType actionType, int tipAmount
+});
 
+
+
+
+}
 /// @nodoc
-class _$PlayerActionCopyWithImpl<$Res, $Val extends PlayerAction>
+class _$PlayerActionCopyWithImpl<$Res>
     implements $PlayerActionCopyWith<$Res> {
-  _$PlayerActionCopyWithImpl(this._value, this._then);
+  _$PlayerActionCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PlayerAction _self;
+  final $Res Function(PlayerAction) _then;
 
-  /// Create a copy of PlayerAction
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? playerId = null,
-    Object? actionType = null,
-    Object? tipAmount = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            playerId:
-                null == playerId
-                    ? _value.playerId
-                    : playerId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            actionType:
-                null == actionType
-                    ? _value.actionType
-                    : actionType // ignore: cast_nullable_to_non_nullable
-                        as PlayerActionType,
-            tipAmount:
-                null == tipAmount
-                    ? _value.tipAmount
-                    : tipAmount // ignore: cast_nullable_to_non_nullable
-                        as int,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of PlayerAction
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? playerId = null,Object? actionType = null,Object? tipAmount = null,}) {
+  return _then(_self.copyWith(
+playerId: null == playerId ? _self.playerId : playerId // ignore: cast_nullable_to_non_nullable
+as String,actionType: null == actionType ? _self.actionType : actionType // ignore: cast_nullable_to_non_nullable
+as PlayerActionType,tipAmount: null == tipAmount ? _self.tipAmount : tipAmount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$PlayerActionImplCopyWith<$Res>
-    implements $PlayerActionCopyWith<$Res> {
-  factory _$$PlayerActionImplCopyWith(
-    _$PlayerActionImpl value,
-    $Res Function(_$PlayerActionImpl) then,
-  ) = __$$PlayerActionImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String playerId, PlayerActionType actionType, int tipAmount});
 }
 
-/// @nodoc
-class __$$PlayerActionImplCopyWithImpl<$Res>
-    extends _$PlayerActionCopyWithImpl<$Res, _$PlayerActionImpl>
-    implements _$$PlayerActionImplCopyWith<$Res> {
-  __$$PlayerActionImplCopyWithImpl(
-    _$PlayerActionImpl _value,
-    $Res Function(_$PlayerActionImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of PlayerAction
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? playerId = null,
-    Object? actionType = null,
-    Object? tipAmount = null,
-  }) {
-    return _then(
-      _$PlayerActionImpl(
-        playerId:
-            null == playerId
-                ? _value.playerId
-                : playerId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        actionType:
-            null == actionType
-                ? _value.actionType
-                : actionType // ignore: cast_nullable_to_non_nullable
-                    as PlayerActionType,
-        tipAmount:
-            null == tipAmount
-                ? _value.tipAmount
-                : tipAmount // ignore: cast_nullable_to_non_nullable
-                    as int,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$PlayerActionImpl implements _PlayerAction {
-  const _$PlayerActionImpl({
-    required this.playerId,
-    required this.actionType,
-    required this.tipAmount,
-  });
 
-  factory _$PlayerActionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PlayerActionImplFromJson(json);
+class _PlayerAction implements PlayerAction {
+  const _PlayerAction({required this.playerId, required this.actionType, required this.tipAmount});
+  factory _PlayerAction.fromJson(Map<String, dynamic> json) => _$PlayerActionFromJson(json);
 
-  @override
-  final String playerId;
-  @override
-  final PlayerActionType actionType;
-  @override
-  final int tipAmount;
+@override final  String playerId;
+@override final  PlayerActionType actionType;
+@override final  int tipAmount;
 
-  @override
-  String toString() {
-    return 'PlayerAction(playerId: $playerId, actionType: $actionType, tipAmount: $tipAmount)';
-  }
+/// Create a copy of PlayerAction
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PlayerActionCopyWith<_PlayerAction> get copyWith => __$PlayerActionCopyWithImpl<_PlayerAction>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PlayerActionImpl &&
-            (identical(other.playerId, playerId) ||
-                other.playerId == playerId) &&
-            (identical(other.actionType, actionType) ||
-                other.actionType == actionType) &&
-            (identical(other.tipAmount, tipAmount) ||
-                other.tipAmount == tipAmount));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, playerId, actionType, tipAmount);
-
-  /// Create a copy of PlayerAction
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PlayerActionImplCopyWith<_$PlayerActionImpl> get copyWith =>
-      __$$PlayerActionImplCopyWithImpl<_$PlayerActionImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PlayerActionImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PlayerActionToJson(this, );
 }
 
-abstract class _PlayerAction implements PlayerAction {
-  const factory _PlayerAction({
-    required final String playerId,
-    required final PlayerActionType actionType,
-    required final int tipAmount,
-  }) = _$PlayerActionImpl;
-
-  factory _PlayerAction.fromJson(Map<String, dynamic> json) =
-      _$PlayerActionImpl.fromJson;
-
-  @override
-  String get playerId;
-  @override
-  PlayerActionType get actionType;
-  @override
-  int get tipAmount;
-
-  /// Create a copy of PlayerAction
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlayerActionImplCopyWith<_$PlayerActionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PlayerAction&&(identical(other.playerId, playerId) || other.playerId == playerId)&&(identical(other.actionType, actionType) || other.actionType == actionType)&&(identical(other.tipAmount, tipAmount) || other.tipAmount == tipAmount));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,playerId,actionType,tipAmount);
+
+@override
+String toString() {
+  return 'PlayerAction(playerId: $playerId, actionType: $actionType, tipAmount: $tipAmount)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$PlayerActionCopyWith<$Res> implements $PlayerActionCopyWith<$Res> {
+  factory _$PlayerActionCopyWith(_PlayerAction value, $Res Function(_PlayerAction) _then) = __$PlayerActionCopyWithImpl;
+@override @useResult
+$Res call({
+ String playerId, PlayerActionType actionType, int tipAmount
+});
+
+
+
+
+}
+/// @nodoc
+class __$PlayerActionCopyWithImpl<$Res>
+    implements _$PlayerActionCopyWith<$Res> {
+  __$PlayerActionCopyWithImpl(this._self, this._then);
+
+  final _PlayerAction _self;
+  final $Res Function(_PlayerAction) _then;
+
+/// Create a copy of PlayerAction
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? playerId = null,Object? actionType = null,Object? tipAmount = null,}) {
+  return _then(_PlayerAction(
+playerId: null == playerId ? _self.playerId : playerId // ignore: cast_nullable_to_non_nullable
+as String,actionType: null == actionType ? _self.actionType : actionType // ignore: cast_nullable_to_non_nullable
+as PlayerActionType,tipAmount: null == tipAmount ? _self.tipAmount : tipAmount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on
