@@ -85,9 +85,15 @@ https://tree.nathanfriend.com/?s=(%27opti8s!(%27fancy6~fullPath!false~trailingSl
 - `derry gen`を実行する
 - asset.gen.dartに自動生成されるので、画像ファイル名を型安全に使用できる
 
-## domain層の実装
+## domainの実装
 - 基本的に`@freezed`を使用して実装する
 - メリットは、copywithメソッドの自動生成と、jsonコンバータの自動生成をしてくれるところ
 - この辺を参考にキャッチアップよろしく
   - https://zenn.dev/sae_eng/articles/ed68107fdae18d
 - 自動生成は`derry gen`を実行する
+
+## adapterの実装（firestore）
+- `firestore/repository`配下はCRUD処理のみ提供する。必ず`FirestoreRepository`を継承すること
+- firestoreはnoスキーマDBであり、データ整合成の担保をアプリでする必要がある。そこで、CRUDに使用するクラスは`FirebaseDto`クラスを継承しているクラスに限定する
+- firestore用のdtoは、一意なIDを持つ（主キー）。IDはfirestore側で自動生成する方針にするため、fromJsonのコンバートには含めるが、toJsonのコンバートには含めないように実装している
+- まー、基本は他の同ディレクトリのクラスを真似して実装してほしい。`FirestoreRepository`の実装を見ると何しているかわかるはず。

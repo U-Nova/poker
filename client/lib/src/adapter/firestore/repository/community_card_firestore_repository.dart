@@ -23,6 +23,6 @@ class CommunityCardFirestoreRepository
   }
 
   Future<void> update(CommunityCardDto dto) async {
-    // await collectionRef().;
+    await collectionRef().doc(dto.id).update(dto.toJson());
   }
 }
