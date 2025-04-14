@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CommunityCards {
 
- List<CommunityCard> get communityCards;
+ String get gameid; List<CommunityCard> get communityCards;
 /// Create a copy of CommunityCards
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,16 @@ $CommunityCardsCopyWith<CommunityCards> get copyWith => _$CommunityCardsCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityCards&&const DeepCollectionEquality().equals(other.communityCards, communityCards));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityCards&&(identical(other.gameid, gameid) || other.gameid == gameid)&&const DeepCollectionEquality().equals(other.communityCards, communityCards));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(communityCards));
+int get hashCode => Object.hash(runtimeType,gameid,const DeepCollectionEquality().hash(communityCards));
 
 @override
 String toString() {
-  return 'CommunityCards(communityCards: $communityCards)';
+  return 'CommunityCards(gameid: $gameid, communityCards: $communityCards)';
 }
 
 
@@ -49,7 +49,7 @@ abstract mixin class $CommunityCardsCopyWith<$Res>  {
   factory $CommunityCardsCopyWith(CommunityCards value, $Res Function(CommunityCards) _then) = _$CommunityCardsCopyWithImpl;
 @useResult
 $Res call({
- List<CommunityCard> communityCards
+ String gameid, List<CommunityCard> communityCards
 });
 
 
@@ -66,9 +66,10 @@ class _$CommunityCardsCopyWithImpl<$Res>
 
 /// Create a copy of CommunityCards
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityCards = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? gameid = null,Object? communityCards = null,}) {
   return _then(_self.copyWith(
-communityCards: null == communityCards ? _self.communityCards : communityCards // ignore: cast_nullable_to_non_nullable
+gameid: null == gameid ? _self.gameid : gameid // ignore: cast_nullable_to_non_nullable
+as String,communityCards: null == communityCards ? _self.communityCards : communityCards // ignore: cast_nullable_to_non_nullable
 as List<CommunityCard>,
   ));
 }
@@ -80,9 +81,10 @@ as List<CommunityCard>,
 @JsonSerializable()
 
 class _CommunityCards implements CommunityCards {
-  const _CommunityCards({required final  List<CommunityCard> communityCards}): _communityCards = communityCards;
+  const _CommunityCards({required this.gameid, required final  List<CommunityCard> communityCards}): _communityCards = communityCards;
   factory _CommunityCards.fromJson(Map<String, dynamic> json) => _$CommunityCardsFromJson(json);
 
+@override final  String gameid;
  final  List<CommunityCard> _communityCards;
 @override List<CommunityCard> get communityCards {
   if (_communityCards is EqualUnmodifiableListView) return _communityCards;
@@ -104,16 +106,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityCards&&const DeepCollectionEquality().equals(other._communityCards, _communityCards));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityCards&&(identical(other.gameid, gameid) || other.gameid == gameid)&&const DeepCollectionEquality().equals(other._communityCards, _communityCards));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_communityCards));
+int get hashCode => Object.hash(runtimeType,gameid,const DeepCollectionEquality().hash(_communityCards));
 
 @override
 String toString() {
-  return 'CommunityCards(communityCards: $communityCards)';
+  return 'CommunityCards(gameid: $gameid, communityCards: $communityCards)';
 }
 
 
@@ -124,7 +126,7 @@ abstract mixin class _$CommunityCardsCopyWith<$Res> implements $CommunityCardsCo
   factory _$CommunityCardsCopyWith(_CommunityCards value, $Res Function(_CommunityCards) _then) = __$CommunityCardsCopyWithImpl;
 @override @useResult
 $Res call({
- List<CommunityCard> communityCards
+ String gameid, List<CommunityCard> communityCards
 });
 
 
@@ -141,9 +143,10 @@ class __$CommunityCardsCopyWithImpl<$Res>
 
 /// Create a copy of CommunityCards
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityCards = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? gameid = null,Object? communityCards = null,}) {
   return _then(_CommunityCards(
-communityCards: null == communityCards ? _self._communityCards : communityCards // ignore: cast_nullable_to_non_nullable
+gameid: null == gameid ? _self.gameid : gameid // ignore: cast_nullable_to_non_nullable
+as String,communityCards: null == communityCards ? _self._communityCards : communityCards // ignore: cast_nullable_to_non_nullable
 as List<CommunityCard>,
   ));
 }

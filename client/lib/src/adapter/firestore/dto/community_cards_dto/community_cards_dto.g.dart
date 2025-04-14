@@ -1,22 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'community_cards.dart';
+part of 'community_cards_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_CommunityCards _$CommunityCardsFromJson(Map<String, dynamic> json) =>
-    _CommunityCards(
-      gameid: json['gameid'] as String,
+_CommunityCardsDto _$CommunityCardsDtoFromJson(Map<String, dynamic> json) =>
+    _CommunityCardsDto(
+      id: json['id'] as String? ?? '',
+      gameId: json['gameId'] as String,
       communityCards:
           (json['communityCards'] as List<dynamic>)
               .map((e) => CommunityCard.fromJson(e as Map<String, dynamic>))
               .toList(),
     );
 
-Map<String, dynamic> _$CommunityCardsToJson(_CommunityCards instance) =>
+Map<String, dynamic> _$CommunityCardsDtoToJson(_CommunityCardsDto instance) =>
     <String, dynamic>{
-      'gameid': instance.gameid,
+      'gameId': instance.gameId,
       'communityCards': instance.communityCards.map((e) => e.toJson()).toList(),
     };

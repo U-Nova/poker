@@ -1,5 +1,5 @@
 enum CollectionKeys {
-  communityCard('community_card');
+  communityCards('community_cards');
 
   const CollectionKeys(this.value);
   final String value;

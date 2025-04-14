@@ -7,6 +7,7 @@ part 'community_cards.g.dart';
 @freezed
 abstract class CommunityCards with _$CommunityCards {
   const factory CommunityCards({
+    required String gameid,
     required List<CommunityCard> communityCards,
   }) = _CommunityCards;
 
