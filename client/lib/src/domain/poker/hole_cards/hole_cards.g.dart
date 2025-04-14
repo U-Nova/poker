@@ -15,4 +15,7 @@ _HoleCards _$HoleCardsFromJson(Map<String, dynamic> json) => _HoleCards(
 );
 
 Map<String, dynamic> _$HoleCardsToJson(_HoleCards instance) =>
-    <String, dynamic>{'playerId': instance.playerId, 'cards': instance.cards};
+    <String, dynamic>{
+      'playerId': instance.playerId,
+      'cards': instance.cards.map((e) => e.toJson()).toList(),
+    };

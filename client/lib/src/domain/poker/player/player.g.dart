@@ -18,6 +18,6 @@ Map<String, dynamic> _$PlayerToJson(_Player instance) => <String, dynamic>{
   'id': instance.id,
   'userId': instance.userId,
   'order': instance.order,
-  'holdCards': instance.holdCards,
+  'holdCards': instance.holdCards.toJson(),
   'tip': instance.tip,
 };

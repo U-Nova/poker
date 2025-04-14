@@ -15,6 +15,6 @@ _SevenCards _$SevenCardsFromJson(Map<String, dynamic> json) => _SevenCards(
 
 Map<String, dynamic> _$SevenCardsToJson(_SevenCards instance) =>
     <String, dynamic>{
-      'communityCards': instance.communityCards,
-      'holeCards': instance.holeCards,
+      'communityCards': instance.communityCards.toJson(),
+      'holeCards': instance.holeCards.toJson(),
     };

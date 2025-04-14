@@ -93,7 +93,7 @@ $CardCopyWith<$Res> get card {
 @JsonSerializable()
 
 class _CommunityCardDto implements CommunityCardDto {
-  const _CommunityCardDto({@JsonKey(includeToJson: false, includeFromJson: true) required this.id, required this.gameId, required this.isOpen, required this.card, required this.order});
+  const _CommunityCardDto({@JsonKey(includeToJson: false, includeFromJson: true) this.id = '', required this.gameId, required this.isOpen, required this.card, required this.order});
   factory _CommunityCardDto.fromJson(Map<String, dynamic> json) => _$CommunityCardDtoFromJson(json);
 
 @override@JsonKey(includeToJson: false, includeFromJson: true) final  String id;

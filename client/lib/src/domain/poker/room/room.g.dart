@@ -17,7 +17,7 @@ _Room _$RoomFromJson(Map<String, dynamic> json) => _Room(
 );
 
 Map<String, dynamic> _$RoomToJson(_Room instance) => <String, dynamic>{
-  'Games': instance.Games,
+  'Games': instance.Games.map((e) => e.toJson()).toList(),
   'limit': instance.limit,
   'rate': instance.rate,
   'minimumBetAmount': instance.minimumBetAmount,

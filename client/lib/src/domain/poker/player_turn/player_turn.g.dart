@@ -20,5 +20,5 @@ Map<String, dynamic> _$PlayerTurnToJson(_PlayerTurn instance) =>
       'playerId': instance.playerId,
       'startDatetime': instance.startDatetime.toIso8601String(),
       'endDatetime': instance.endDatetime.toIso8601String(),
-      'playerAction': instance.playerAction,
+      'playerAction': instance.playerAction.toJson(),
     };

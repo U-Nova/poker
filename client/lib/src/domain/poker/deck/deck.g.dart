@@ -17,6 +17,6 @@ _Deck _$DeckFromJson(Map<String, dynamic> json) => _Deck(
 );
 
 Map<String, dynamic> _$DeckToJson(_Deck instance) => <String, dynamic>{
-  'communityCards': instance.communityCards,
-  'holeCardsList': instance.holeCardsList,
+  'communityCards': instance.communityCards.toJson(),
+  'holeCardsList': instance.holeCardsList.map((e) => e.toJson()).toList(),
 };

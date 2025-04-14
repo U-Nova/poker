@@ -16,7 +16,7 @@ _CommunityCard _$CommunityCardFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$CommunityCardToJson(_CommunityCard instance) =>
     <String, dynamic>{
       'isOpen': instance.isOpen,
-      'card': instance.card,
+      'card': instance.card.toJson(),
       'order': _$CommunityCardOrderEnumMap[instance.order]!,
     };
 

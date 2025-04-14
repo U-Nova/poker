@@ -15,4 +15,6 @@ _CommunityCards _$CommunityCardsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CommunityCardsToJson(_CommunityCards instance) =>
-    <String, dynamic>{'communityCards': instance.communityCards};
+    <String, dynamic>{
+      'communityCards': instance.communityCards.map((e) => e.toJson()).toList(),
+    };

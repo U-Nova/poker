@@ -8,6 +8,7 @@ part 'game.g.dart';
 
 @freezed
 abstract class Game with _$Game {
+  @JsonSerializable(explicitToJson: true)
   const factory Game({
     required Deck deck,
     required List<Player> players,

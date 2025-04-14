@@ -11,7 +11,9 @@ abstract class CommunityCardDto
     with _$CommunityCardDto
     implements FirestoreDto {
   const factory CommunityCardDto({
-    @JsonKey(includeToJson: false, includeFromJson: true) required String id,
+    @Default('')
+    @JsonKey(includeToJson: false, includeFromJson: true)
+    String id,
     required String gameId,
     required bool isOpen,
     required Card card,
