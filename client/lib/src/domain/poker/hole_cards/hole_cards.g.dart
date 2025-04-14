@@ -10,7 +10,7 @@ _HoleCards _$HoleCardsFromJson(Map<String, dynamic> json) => _HoleCards(
   playerId: json['playerId'] as String,
   cards:
       (json['cards'] as List<dynamic>)
-          .map((e) => HoleCards.fromJson(e as Map<String, dynamic>))
+          .map((e) => Card.fromJson(e as Map<String, dynamic>))
           .toList(),
 );
 

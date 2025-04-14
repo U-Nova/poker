@@ -11,7 +11,7 @@ abstract class Round with _$Round {
     required String id,
     required RoundType roundType,
     required int currentBetAmount,
-    required List<PlayerTurn> PlayerTurn,
+    required List<PlayerTurn> playerTurn,
   }) = _Round;
 
   factory Round.fromJson(Map<String, Object?> json) => _$RoundFromJson(json);

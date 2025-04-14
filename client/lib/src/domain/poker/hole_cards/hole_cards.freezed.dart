@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$HoleCards {
 
- String get playerId; List<HoleCards> get cards;
+ String get playerId; List<Card> get cards;
 /// Create a copy of HoleCards
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $HoleCardsCopyWith<$Res>  {
   factory $HoleCardsCopyWith(HoleCards value, $Res Function(HoleCards) _then) = _$HoleCardsCopyWithImpl;
 @useResult
 $Res call({
- String playerId, List<HoleCards> cards
+ String playerId, List<Card> cards
 });
 
 
@@ -70,7 +70,7 @@ class _$HoleCardsCopyWithImpl<$Res>
   return _then(_self.copyWith(
 playerId: null == playerId ? _self.playerId : playerId // ignore: cast_nullable_to_non_nullable
 as String,cards: null == cards ? _self.cards : cards // ignore: cast_nullable_to_non_nullable
-as List<HoleCards>,
+as List<Card>,
   ));
 }
 
@@ -81,12 +81,12 @@ as List<HoleCards>,
 @JsonSerializable()
 
 class _HoleCards implements HoleCards {
-  const _HoleCards({required this.playerId, required final  List<HoleCards> cards}): _cards = cards;
+  const _HoleCards({required this.playerId, required final  List<Card> cards}): _cards = cards;
   factory _HoleCards.fromJson(Map<String, dynamic> json) => _$HoleCardsFromJson(json);
 
 @override final  String playerId;
- final  List<HoleCards> _cards;
-@override List<HoleCards> get cards {
+ final  List<Card> _cards;
+@override List<Card> get cards {
   if (_cards is EqualUnmodifiableListView) return _cards;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_cards);
@@ -126,7 +126,7 @@ abstract mixin class _$HoleCardsCopyWith<$Res> implements $HoleCardsCopyWith<$Re
   factory _$HoleCardsCopyWith(_HoleCards value, $Res Function(_HoleCards) _then) = __$HoleCardsCopyWithImpl;
 @override @useResult
 $Res call({
- String playerId, List<HoleCards> cards
+ String playerId, List<Card> cards
 });
 
 
@@ -147,7 +147,7 @@ class __$HoleCardsCopyWithImpl<$Res>
   return _then(_HoleCards(
 playerId: null == playerId ? _self.playerId : playerId // ignore: cast_nullable_to_non_nullable
 as String,cards: null == cards ? _self._cards : cards // ignore: cast_nullable_to_non_nullable
-as List<HoleCards>,
+as List<Card>,
   ));
 }
 

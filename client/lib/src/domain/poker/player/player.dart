@@ -1,4 +1,3 @@
-import 'package:client/src/domain/poker/hole_cards/hole_cards.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'player.freezed.dart';
@@ -10,7 +9,6 @@ abstract class Player with _$Player {
     required String id,
     required String userId, //todo Userクラスを持たせる
     required int order,
-    required HoleCards holdCards,
     required int tip,
   }) = _Player;
 

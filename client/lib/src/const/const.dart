@@ -1,0 +1,3 @@
+final int NUMBER_OF_HOLE_CARDS = 2;
+final int NUMBER_OF_COMMUNITY_CARDS = 5;
+final int NUMBER_OF_FLOP_CARDS = 3;

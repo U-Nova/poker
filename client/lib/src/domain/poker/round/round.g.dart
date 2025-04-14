@@ -10,14 +10,17 @@ _Round _$RoundFromJson(Map<String, dynamic> json) => _Round(
   id: json['id'] as String,
   roundType: $enumDecode(_$RoundTypeEnumMap, json['roundType']),
   currentBetAmount: (json['currentBetAmount'] as num).toInt(),
-  PlayerTurn: json['PlayerTurn'] as List<dynamic>,
+  playerTurn:
+      (json['playerTurn'] as List<dynamic>)
+          .map((e) => PlayerTurn.fromJson(e as Map<String, dynamic>))
+          .toList(),
 );
 
 Map<String, dynamic> _$RoundToJson(_Round instance) => <String, dynamic>{
   'id': instance.id,
   'roundType': _$RoundTypeEnumMap[instance.roundType]!,
   'currentBetAmount': instance.currentBetAmount,
-  'PlayerTurn': instance.PlayerTurn,
+  'playerTurn': instance.playerTurn.map((e) => e.toJson()).toList(),
 };
 
 const _$RoundTypeEnumMap = {

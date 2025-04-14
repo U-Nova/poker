@@ -15,4 +15,7 @@ abstract class CommunityCard with _$CommunityCard {
 
   factory CommunityCard.fromJson(Map<String, Object?> json) =>
       _$CommunityCardFromJson(json);
+
+  factory CommunityCard.init(Card card, CommunityCardOrder order) =>
+      CommunityCard(isOpen: false, card: card, order: order);
 }

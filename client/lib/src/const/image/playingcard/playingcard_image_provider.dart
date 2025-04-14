@@ -29,6 +29,7 @@ class PlayingcardImageProvider extends Notifier<PlayingcardImage> {
 
 final images = {
   'normal_joker_1': Assets.images.playingcard.normal.joker.joker.path,
+  'normal_joker_2': Assets.images.playingcard.normal.joker.joker.path,
   'normal_dia_1': Assets.images.playingcard.normal.dia.a1.path,
   'normal_dia_2': Assets.images.playingcard.normal.dia.a2.path,
   'normal_dia_3': Assets.images.playingcard.normal.dia.a3.path,
