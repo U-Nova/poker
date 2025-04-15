@@ -1,5 +1,5 @@
 import 'package:client/src/domain/poker/card/card.dart';
-import 'package:client/src/domain/poker/community_card_order.dart';
+import 'package:client/src/domain/poker/community_card/community_card_order.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'community_card.freezed.dart';

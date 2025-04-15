@@ -1,7 +1,7 @@
 import 'package:client/src/const/const.dart';
 import 'package:client/src/domain/poker/card/card.dart';
 import 'package:client/src/domain/poker/community_card/community_card.dart';
-import 'package:client/src/domain/poker/community_card_order.dart';
+import 'package:client/src/domain/poker/community_card/community_card_order.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'community_cards.freezed.dart';

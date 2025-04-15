@@ -1,4 +1,4 @@
-import 'package:client/src/domain/poker/player_action_type.dart';
+import 'package:client/src/domain/poker/player_action/player_action_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'player_action.freezed.dart';

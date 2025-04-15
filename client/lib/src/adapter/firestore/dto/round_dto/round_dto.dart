@@ -1,7 +1,7 @@
 import 'package:client/src/adapter/firestore/dto/firestore_dto.dart';
 import 'package:client/src/domain/poker/player_turn/player_turn.dart';
 import 'package:client/src/domain/poker/round/round.dart';
-import 'package:client/src/domain/poker/round_type.dart';
+import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'round_dto.freezed.dart';

@@ -4,7 +4,7 @@ import 'package:client/src/application/poker/repository/round_repository.dart';
 import 'package:client/src/domain/poker/game/game.dart';
 import 'package:client/src/domain/poker/game_event/round_event/round_event.dart';
 import 'package:client/src/domain/poker/round/round.dart';
-import 'package:client/src/domain/poker/round_type.dart';
+import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final startPreflopRoundUsecaseProvider =

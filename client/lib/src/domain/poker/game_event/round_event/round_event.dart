@@ -1,7 +1,7 @@
 import 'package:client/src/domain/poker/game_event/game_event.dart';
 import 'package:client/src/domain/poker/game_event/game_event_type.dart';
 import 'package:client/src/domain/poker/round/round.dart';
-import 'package:client/src/domain/poker/round_type.dart';
+import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'round_event.freezed.dart';

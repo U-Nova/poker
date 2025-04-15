@@ -1,5 +1,5 @@
-import 'package:client/src/domain/poker/card_number.dart';
-import 'package:client/src/domain/poker/card_suit.dart';
+import 'package:client/src/domain/poker/card/card_number.dart';
+import 'package:client/src/domain/poker/card/card_suit.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'card.freezed.dart';
