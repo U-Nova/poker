@@ -1,7 +1,7 @@
 import 'package:client/gen/assets.gen.dart';
+import 'package:client/src/application/poker/start_preflop_round_usecase.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
 import 'package:client/src/domain/poker/game/game.dart';
-import 'package:client/src/domain/poker/poker_table/poker_table.dart';
 import 'package:client/src/router.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +69,7 @@ class GameView extends ConsumerWidget {
                               ...communityCards
                                   .map((card) => Image.memory(
                                         images.getBy(card.card.imageKey(null))!,
-                                        width: 70,
+                                        width: 50,
                                       ))
                                   .toList()
                             ],
@@ -91,7 +91,7 @@ class GameView extends ConsumerWidget {
                                         .map((card) => Image.memory(
                                               images
                                                   .getBy(card.imageKey(null))!,
-                                              width: 70,
+                                              width: 50,
                                             ))
                                         .toList()
                                   ],
@@ -101,7 +101,22 @@ class GameView extends ConsumerWidget {
                           )
                         ],
                       ),
-                    )
+                    ),
+                    GestureDetector(
+                      child: Text(
+                        'PrerFlop開始',
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onTap: () async {
+                        ref
+                            .read(startPreflopRoundUsecaseProvider)
+                            .execute(game);
+                      },
+                    ),
                   ],
                 ),
               ),

@@ -4,7 +4,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'round.dart';
+part of 'round_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,22 +14,22 @@ part of 'round.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$Round {
+mixin _$RoundDto {
 
- String get id; RoundType get roundType; int get currentBetAmount; List<PlayerTurn> get playerTurn;
-/// Create a copy of Round
+@JsonKey(includeToJson: false, includeFromJson: true) String get id; RoundType get roundType; int get currentBetAmount; List<PlayerTurn> get playerTurn;
+/// Create a copy of RoundDto
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$RoundCopyWith<Round> get copyWith => _$RoundCopyWithImpl<Round>(this as Round, _$identity);
+$RoundDtoCopyWith<RoundDto> get copyWith => _$RoundDtoCopyWithImpl<RoundDto>(this as RoundDto, _$identity);
 
-  /// Serializes this Round to a JSON map.
+  /// Serializes this RoundDto to a JSON map.
   Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Round&&(identical(other.id, id) || other.id == id)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other.playerTurn, playerTurn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoundDto&&(identical(other.id, id) || other.id == id)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other.playerTurn, playerTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -38,18 +38,18 @@ int get hashCode => Object.hash(runtimeType,id,roundType,currentBetAmount,const 
 
 @override
 String toString() {
-  return 'Round(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
+  return 'RoundDto(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $RoundCopyWith<$Res>  {
-  factory $RoundCopyWith(Round value, $Res Function(Round) _then) = _$RoundCopyWithImpl;
+abstract mixin class $RoundDtoCopyWith<$Res>  {
+  factory $RoundDtoCopyWith(RoundDto value, $Res Function(RoundDto) _then) = _$RoundDtoCopyWithImpl;
 @useResult
 $Res call({
- String id, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
+@JsonKey(includeToJson: false, includeFromJson: true) String id, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
 });
 
 
@@ -57,14 +57,14 @@ $Res call({
 
 }
 /// @nodoc
-class _$RoundCopyWithImpl<$Res>
-    implements $RoundCopyWith<$Res> {
-  _$RoundCopyWithImpl(this._self, this._then);
+class _$RoundDtoCopyWithImpl<$Res>
+    implements $RoundDtoCopyWith<$Res> {
+  _$RoundDtoCopyWithImpl(this._self, this._then);
 
-  final Round _self;
-  final $Res Function(Round) _then;
+  final RoundDto _self;
+  final $Res Function(RoundDto) _then;
 
-/// Create a copy of Round
+/// Create a copy of RoundDto
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? roundType = null,Object? currentBetAmount = null,Object? playerTurn = null,}) {
   return _then(_self.copyWith(
@@ -82,11 +82,11 @@ as List<PlayerTurn>,
 /// @nodoc
 @JsonSerializable()
 
-class _Round implements Round {
-  const _Round({this.id = '', required this.roundType, required this.currentBetAmount, required final  List<PlayerTurn> playerTurn}): _playerTurn = playerTurn;
-  factory _Round.fromJson(Map<String, dynamic> json) => _$RoundFromJson(json);
+class _RoundDto extends RoundDto {
+  const _RoundDto({@JsonKey(includeToJson: false, includeFromJson: true) this.id = '', required this.roundType, required this.currentBetAmount, required final  List<PlayerTurn> playerTurn}): _playerTurn = playerTurn,super._();
+  factory _RoundDto.fromJson(Map<String, dynamic> json) => _$RoundDtoFromJson(json);
 
-@override@JsonKey() final  String id;
+@override@JsonKey(includeToJson: false, includeFromJson: true) final  String id;
 @override final  RoundType roundType;
 @override final  int currentBetAmount;
  final  List<PlayerTurn> _playerTurn;
@@ -97,20 +97,20 @@ class _Round implements Round {
 }
 
 
-/// Create a copy of Round
+/// Create a copy of RoundDto
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$RoundCopyWith<_Round> get copyWith => __$RoundCopyWithImpl<_Round>(this, _$identity);
+_$RoundDtoCopyWith<_RoundDto> get copyWith => __$RoundDtoCopyWithImpl<_RoundDto>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$RoundToJson(this, );
+  return _$RoundDtoToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Round&&(identical(other.id, id) || other.id == id)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other._playerTurn, _playerTurn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoundDto&&(identical(other.id, id) || other.id == id)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other._playerTurn, _playerTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -119,18 +119,18 @@ int get hashCode => Object.hash(runtimeType,id,roundType,currentBetAmount,const 
 
 @override
 String toString() {
-  return 'Round(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
+  return 'RoundDto(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$RoundCopyWith<$Res> implements $RoundCopyWith<$Res> {
-  factory _$RoundCopyWith(_Round value, $Res Function(_Round) _then) = __$RoundCopyWithImpl;
+abstract mixin class _$RoundDtoCopyWith<$Res> implements $RoundDtoCopyWith<$Res> {
+  factory _$RoundDtoCopyWith(_RoundDto value, $Res Function(_RoundDto) _then) = __$RoundDtoCopyWithImpl;
 @override @useResult
 $Res call({
- String id, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
+@JsonKey(includeToJson: false, includeFromJson: true) String id, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
 });
 
 
@@ -138,17 +138,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$RoundCopyWithImpl<$Res>
-    implements _$RoundCopyWith<$Res> {
-  __$RoundCopyWithImpl(this._self, this._then);
+class __$RoundDtoCopyWithImpl<$Res>
+    implements _$RoundDtoCopyWith<$Res> {
+  __$RoundDtoCopyWithImpl(this._self, this._then);
 
-  final _Round _self;
-  final $Res Function(_Round) _then;
+  final _RoundDto _self;
+  final $Res Function(_RoundDto) _then;
 
-/// Create a copy of Round
+/// Create a copy of RoundDto
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? roundType = null,Object? currentBetAmount = null,Object? playerTurn = null,}) {
-  return _then(_Round(
+  return _then(_RoundDto(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable
 as RoundType,currentBetAmount: null == currentBetAmount ? _self.currentBetAmount : currentBetAmount // ignore: cast_nullable_to_non_nullable

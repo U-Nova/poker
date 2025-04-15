@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'round.dart';
+part of 'round_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Round _$RoundFromJson(Map<String, dynamic> json) => _Round(
+_RoundDto _$RoundDtoFromJson(Map<String, dynamic> json) => _RoundDto(
   id: json['id'] as String? ?? '',
   roundType: $enumDecode(_$RoundTypeEnumMap, json['roundType']),
   currentBetAmount: (json['currentBetAmount'] as num).toInt(),
@@ -16,8 +16,7 @@ _Round _$RoundFromJson(Map<String, dynamic> json) => _Round(
           .toList(),
 );
 
-Map<String, dynamic> _$RoundToJson(_Round instance) => <String, dynamic>{
-  'id': instance.id,
+Map<String, dynamic> _$RoundDtoToJson(_RoundDto instance) => <String, dynamic>{
   'roundType': _$RoundTypeEnumMap[instance.roundType]!,
   'currentBetAmount': instance.currentBetAmount,
   'playerTurn': instance.playerTurn.map((e) => e.toJson()).toList(),

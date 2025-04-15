@@ -1,0 +1,1 @@
+enum GameEventType { roundStart, roundEnd }

@@ -15,6 +15,9 @@ class StartGameUsecase extends AbstractUsecase<String, Game> {
   @override
   Future<Game> execute(String req) async {
     // TODO: ここで色々処理を実装する
+    // ディーラーボタン配置（プレイヤーのオーダーをランダムで決める）
+    // SBとBBの強制ベット
+
     print('ゲームを開始しました');
     final game = await _ref.read(sampleUsecaseProvider).execute(req);
 

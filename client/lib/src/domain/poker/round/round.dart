@@ -8,7 +8,7 @@ part 'round.g.dart';
 @freezed
 abstract class Round with _$Round {
   const factory Round({
-    required String id,
+    @Default('') String id,
     required RoundType roundType,
     required int currentBetAmount,
     required List<PlayerTurn> playerTurn,
