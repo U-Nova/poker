@@ -1,7 +1,9 @@
 import 'package:client/gen/assets.gen.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
 import 'package:client/src/domain/poker/game/game.dart';
+import 'package:client/src/domain/poker/poker_table/poker_table.dart';
 import 'package:client/src/router.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -16,6 +18,8 @@ class GameView extends ConsumerWidget {
         .forEach((e) => print('communityCards: ${e.card.imageKey(null)}'));
     game.deck.holeCardsList.forEach((e) => e.cards
         .forEach((element) => print('holeCards: ${element.imageKey(null)}')));
+    final communityCards = game.deck.communityCards.communityCards;
+    final holeCards = game.deck.holeCardsList;
     return Scaffold(
       body: Container(
         child: Stack(
@@ -34,32 +38,69 @@ class GameView extends ConsumerWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
-                      'ゲーム画面',
-                      style: TextStyle(
-                        color: Colors.greenAccent,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
                     GestureDetector(
-                      child: Image.asset(
-                        Assets.images.playingcard.normal.back.path,
-                        width: 100,
+                      child: Text(
+                        '戻る',
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       onTap: () {
                         router.pop();
                       },
                     ),
-                    Row(
-                      children: [
-                        ...game.deck.communityCards.communityCards
-                            .map((card) => Image.memory(
-                                  images.getBy(card.card.imageKey(null))!,
-                                  width: 70,
-                                ))
-                            .toList()
-                      ],
+                    Container(
+                      padding: EdgeInsets.only(top: 30, bottom: 30),
+                      color: Colors.black38,
+                      child: Column(
+                        children: [
+                          Text(
+                            'CommunityCard',
+                            style: TextStyle(
+                              color: Colors.greenAccent,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              ...communityCards
+                                  .map((card) => Image.memory(
+                                        images.getBy(card.card.imageKey(null))!,
+                                        width: 70,
+                                      ))
+                                  .toList()
+                            ],
+                          ),
+                          ...holeCards.mapIndexed(
+                            (index, e) => Column(
+                              children: [
+                                Text(
+                                  'Player${index + 1}',
+                                  style: TextStyle(
+                                    color: Colors.greenAccent,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    ...e.cards
+                                        .map((card) => Image.memory(
+                                              images
+                                                  .getBy(card.imageKey(null))!,
+                                              width: 70,
+                                            ))
+                                        .toList()
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
