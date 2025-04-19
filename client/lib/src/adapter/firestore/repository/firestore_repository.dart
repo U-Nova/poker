@@ -23,4 +23,21 @@ abstract class FirestoreRepository<T extends FirestoreDto> {
           toFirestore: (model, _) => model.toJson(),
         );
   }
+
+  Future<List<T>> list() async {
+    final snapshot = await collectionRef().get();
+    return snapshot.docs.map((row) => row.data()).toList();
+  }
+
+  Future<T> save(T dto) async {
+    final docRef = await collectionRef().add(dto);
+    final snapshot = await docRef.get();
+    final registerd = snapshot.data();
+    if (registerd == null) throw Error();
+    return registerd;
+  }
+
+  Future<void> update(T dto) async {
+    await collectionRef().doc(dto.id).update(dto.toJson());
+  }
 }

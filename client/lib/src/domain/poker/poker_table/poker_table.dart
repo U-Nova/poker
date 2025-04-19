@@ -23,7 +23,7 @@ abstract class PokerTable with _$PokerTable {
   factory PokerTable.fromJson(Map<String, Object?> json) =>
       _$PokerTableFromJson(json);
 
-  Game startGame() {
+  Game initGame() {
     return Game(
       // TODO: rounds, pods, buttonPlayerIdは仮実装
       deck: _createDeck(),

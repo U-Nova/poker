@@ -28,7 +28,7 @@ abstract class SingleThreadQueue<T> {
     if (_timer != null && _timer!.isActive) return;
 
     _timer = Timer.periodic(interval, (timer) async {
-      logger.d('Processing queue...');
+      print('Processing queue...');
       if (_isProcessing || _queue.isEmpty) return;
 
       _isProcessing = true;
