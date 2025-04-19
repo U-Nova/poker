@@ -2,6 +2,7 @@ import 'package:client/gen/assets.gen.dart';
 import 'package:client/src/application/poker/start_preflop_round_usecase.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
 import 'package:client/src/domain/poker/game/game.dart';
+import 'package:client/src/domain/poker/game/game_provider.dart';
 import 'package:client/src/domain/poker/game_engine.dart';
 import 'package:client/src/router.dart';
 import 'package:collection/collection.dart';
@@ -9,16 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class GameView extends ConsumerWidget {
-  const GameView({super.key, required this.game});
-  final Game game;
+  const GameView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final images = ref.read(playingcardImageProvider);
-    game.deck.communityCards.communityCards
-        .forEach((e) => print('communityCards: ${e.card.imageKey(null)}'));
-    game.deck.holeCardsList.forEach((e) => e.cards
-        .forEach((element) => print('holeCards: ${element.imageKey(null)}')));
+    final game = ref.read(gameProvider).orThrow;
     final communityCards = game.deck.communityCards.communityCards;
     final holeCards = game.deck.holeCardsList;
     return Scaffold(
@@ -115,7 +112,7 @@ class GameView extends ConsumerWidget {
                       onTap: () async {
                         ref
                             .read(startPreflopRoundUsecaseProvider)
-                            .execute(game);
+                            .execute(null);
                       },
                     ),
                     GestureDetector(

@@ -21,7 +21,7 @@ abstract class Game with _$Game {
 }
 
 extension GameExtension on Game? {
-  Game get ins => _getOrThrow();
+  Game get orThrow => _getOrThrow();
 
   Game _getOrThrow() {
     if (this == null) {

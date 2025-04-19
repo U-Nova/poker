@@ -1,6 +1,5 @@
 import 'package:client/src/application/abstract_usecase.dart';
 import 'package:client/src/application/poker/repository/game_repository.dart';
-import 'package:client/src/domain/poker/game/game.dart';
 import 'package:client/src/domain/poker/game_engine.dart';
 import 'package:client/src/domain/poker/player/player.dart';
 import 'package:client/src/domain/poker/poker_table/poker_table.dart';
@@ -11,14 +10,14 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 final startGameUsecaseProvider =
     Provider<StartGameUsecase>(StartGameUsecase.new);
 
-class StartGameUsecase extends AbstractUsecase<String, Game> {
+class StartGameUsecase extends AbstractUsecase<void, void> {
   // TODO: AbstracUsecaseのジェネリクスに必要なinputとoutputの型を渡す
   StartGameUsecase(this._ref);
 
   final Ref _ref;
 
   @override
-  Future<Game> execute(String req) async {
+  Future<void> execute(void _) async {
     final gameRepository = _ref.read(gameRepositoryProvider);
     // TODO: ここで色々処理を実装する
     // ディーラーボタン配置（プレイヤーのオーダーをランダムで決める）
@@ -34,7 +33,7 @@ class StartGameUsecase extends AbstractUsecase<String, Game> {
       ],
       setting: TableSetting(rule: ""),
     );
-    final game = await gameRepository.register(table.initGame());
-    return _ref.read(gameEngineProvider).startGame();
+    await gameRepository.register(table.initGame());
+    _ref.read(gameEngineProvider).startGame();
   }
 }

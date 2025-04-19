@@ -17,14 +17,13 @@ class GameEngine {
   final Ref _ref;
   final List<StreamSubscription<dynamic>> listeners = [];
 
-  Future<Game> startGame() async {
+  Future<void> startGame() async {
     logger.d("GameEngine: startGame");
-    final game = _ref.read(gameProvider).ins;
+    final game = _ref.read(gameProvider).orThrow;
     final _queue = GameEventQueue();
 
     listeners.add(_ref.read(gameEventListenerProvider).listen(game));
     _queue.addComsumers(_gameEventConsumer);
-    return game;
   }
 
   Future<void> endGame() async {
