@@ -2,6 +2,7 @@ import 'package:client/gen/assets.gen.dart';
 import 'package:client/src/application/poker/start_preflop_round_usecase.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
 import 'package:client/src/domain/poker/game/game.dart';
+import 'package:client/src/domain/poker/game_engine.dart';
 import 'package:client/src/router.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
@@ -115,6 +116,20 @@ class GameView extends ConsumerWidget {
                         ref
                             .read(startPreflopRoundUsecaseProvider)
                             .execute(game);
+                      },
+                    ),
+                    GestureDetector(
+                      child: Text(
+                        'ゲーム終了',
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onTap: () async {
+                        ref.read(gameEngineProvider).endGame();
+                        router.pop();
                       },
                     ),
                   ],

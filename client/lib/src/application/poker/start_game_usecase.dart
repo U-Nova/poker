@@ -35,6 +35,6 @@ class StartGameUsecase extends AbstractUsecase<String, Game> {
       setting: TableSetting(rule: ""),
     );
     final game = await gameRepository.register(table.initGame());
-    return _ref.read(gameEngineProvider).startGame(game);
+    return _ref.read(gameEngineProvider).startGame();
   }
 }

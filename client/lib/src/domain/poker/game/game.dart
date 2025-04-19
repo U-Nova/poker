@@ -19,3 +19,14 @@ abstract class Game with _$Game {
 
   factory Game.fromJson(Map<String, Object?> json) => _$GameFromJson(json);
 }
+
+extension GameExtension on Game? {
+  Game get ins => _getOrThrow();
+
+  Game _getOrThrow() {
+    if (this == null) {
+      throw Exception("Game is null");
+    }
+    return this!;
+  }
+}

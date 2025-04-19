@@ -24,6 +24,10 @@ abstract class SingleThreadQueue<T> {
     _consumers.add(consumer);
   }
 
+  void clearConsumers() {
+    _consumers.clear();
+  }
+
   void start() {
     if (_timer != null && _timer!.isActive) return;
 
@@ -57,5 +61,6 @@ abstract class SingleThreadQueue<T> {
   void dispose() {
     stop();
     _queue.clear();
+    _consumers.clear();
   }
 }

@@ -8,6 +8,6 @@ final gameFirestoreRepositoryProvider =
 
 class GameFirestoreRepository extends FirestoreRepository<GameDto> {
   GameFirestoreRepository(this._ref)
-      : super(CollectionKeys.round, GameDto.fromJson);
+      : super(CollectionKeys.game, GameDto.fromJson);
   final Ref _ref;
 }
