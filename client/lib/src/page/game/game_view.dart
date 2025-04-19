@@ -1,9 +1,7 @@
 import 'package:client/gen/assets.gen.dart';
 import 'package:client/src/application/poker/start_preflop_round_usecase.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
-import 'package:client/src/domain/poker/game/game.dart';
-import 'package:client/src/domain/poker/game/game_provider.dart';
-import 'package:client/src/domain/poker/game_engine.dart';
+import 'package:client/src/page/game/game_presenter.dart';
 import 'package:client/src/router.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +13,8 @@ class GameView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final images = ref.read(playingcardImageProvider);
-    final game = ref.read(gameProvider).orThrow;
+    final game = ref.read(gamePresenterProvider).game;
+    final gamePresenter = ref.read(gamePresenterProvider.notifier);
     final communityCards = game.deck.communityCards.communityCards;
     final holeCards = game.deck.holeCardsList;
     return Scaffold(
@@ -125,8 +124,7 @@ class GameView extends ConsumerWidget {
                         ),
                       ),
                       onTap: () async {
-                        ref.read(gameEngineProvider).endGame();
-                        router.pop();
+                        await gamePresenter.endGame();
                       },
                     ),
                   ],
