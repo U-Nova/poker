@@ -7,6 +7,7 @@ part of 'game.dart';
 // **************************************************************************
 
 _Game _$GameFromJson(Map<String, dynamic> json) => _Game(
+  id: json['id'] as String? ?? '',
   deck: Deck.fromJson(json['deck'] as Map<String, dynamic>),
   players:
       (json['players'] as List<dynamic>)
@@ -21,6 +22,7 @@ _Game _$GameFromJson(Map<String, dynamic> json) => _Game(
 );
 
 Map<String, dynamic> _$GameToJson(_Game instance) => <String, dynamic>{
+  'id': instance.id,
   'deck': instance.deck.toJson(),
   'players': instance.players.map((e) => e.toJson()).toList(),
   'rounds': instance.rounds.map((e) => e.toJson()).toList(),

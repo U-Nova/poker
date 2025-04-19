@@ -14,6 +14,7 @@ abstract class RoundEventDto with _$RoundEventDto implements FirestoreDto {
     @Default('')
     @JsonKey(includeToJson: false, includeFromJson: true)
     String id,
+    required String gameId,
     required GameEventType type,
     required String roundId,
     required RoundType roundType,
@@ -25,6 +26,7 @@ abstract class RoundEventDto with _$RoundEventDto implements FirestoreDto {
   factory RoundEventDto.fromDomain(RoundEvent roundEvent) {
     return RoundEventDto(
       id: roundEvent.id,
+      gameId: roundEvent.gameId,
       type: roundEvent.type,
       roundId: roundEvent.roundId,
       roundType: roundEvent.roundType,
@@ -34,6 +36,7 @@ abstract class RoundEventDto with _$RoundEventDto implements FirestoreDto {
   RoundEvent toDomain() {
     return RoundEvent(
       id: id,
+      gameId: gameId,
       type: type,
       roundId: roundId,
       roundType: roundType,

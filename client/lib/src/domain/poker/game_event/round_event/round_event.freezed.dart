@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RoundEvent {
 
- String get id; GameEventType get type; String get roundId; RoundType get roundType;
+ String get id; String get gameId; GameEventType get type; String get roundId; RoundType get roundType;
 /// Create a copy of RoundEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,16 @@ $RoundEventCopyWith<RoundEvent> get copyWith => _$RoundEventCopyWithImpl<RoundEv
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoundEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoundEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.type, type) || other.type == type)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,roundId,roundType);
+int get hashCode => Object.hash(runtimeType,id,gameId,type,roundId,roundType);
 
 @override
 String toString() {
-  return 'RoundEvent(id: $id, type: $type, roundId: $roundId, roundType: $roundType)';
+  return 'RoundEvent(id: $id, gameId: $gameId, type: $type, roundId: $roundId, roundType: $roundType)';
 }
 
 
@@ -49,7 +49,7 @@ abstract mixin class $RoundEventCopyWith<$Res>  {
   factory $RoundEventCopyWith(RoundEvent value, $Res Function(RoundEvent) _then) = _$RoundEventCopyWithImpl;
 @useResult
 $Res call({
- String id, GameEventType type, String roundId, RoundType roundType
+ String id, String gameId, GameEventType type, String roundId, RoundType roundType
 });
 
 
@@ -66,9 +66,10 @@ class _$RoundEventCopyWithImpl<$Res>
 
 /// Create a copy of RoundEvent
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? type = null,Object? roundId = null,Object? roundType = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? gameId = null,Object? type = null,Object? roundId = null,Object? roundType = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
 as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as GameEventType,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable
@@ -83,10 +84,11 @@ as RoundType,
 @JsonSerializable()
 
 class _RoundEvent extends RoundEvent {
-  const _RoundEvent({this.id = '', required this.type, required this.roundId, required this.roundType}): super._();
+  const _RoundEvent({this.id = '', required this.gameId, required this.type, required this.roundId, required this.roundType}): super._();
   factory _RoundEvent.fromJson(Map<String, dynamic> json) => _$RoundEventFromJson(json);
 
 @override@JsonKey() final  String id;
+@override final  String gameId;
 @override final  GameEventType type;
 @override final  String roundId;
 @override final  RoundType roundType;
@@ -104,16 +106,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoundEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoundEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.type, type) || other.type == type)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,roundId,roundType);
+int get hashCode => Object.hash(runtimeType,id,gameId,type,roundId,roundType);
 
 @override
 String toString() {
-  return 'RoundEvent(id: $id, type: $type, roundId: $roundId, roundType: $roundType)';
+  return 'RoundEvent(id: $id, gameId: $gameId, type: $type, roundId: $roundId, roundType: $roundType)';
 }
 
 
@@ -124,7 +126,7 @@ abstract mixin class _$RoundEventCopyWith<$Res> implements $RoundEventCopyWith<$
   factory _$RoundEventCopyWith(_RoundEvent value, $Res Function(_RoundEvent) _then) = __$RoundEventCopyWithImpl;
 @override @useResult
 $Res call({
- String id, GameEventType type, String roundId, RoundType roundType
+ String id, String gameId, GameEventType type, String roundId, RoundType roundType
 });
 
 
@@ -141,9 +143,10 @@ class __$RoundEventCopyWithImpl<$Res>
 
 /// Create a copy of RoundEvent
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? type = null,Object? roundId = null,Object? roundType = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? gameId = null,Object? type = null,Object? roundId = null,Object? roundType = null,}) {
   return _then(_RoundEvent(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
 as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as GameEventType,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable

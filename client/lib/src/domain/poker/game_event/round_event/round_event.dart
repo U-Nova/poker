@@ -12,6 +12,7 @@ abstract class RoundEvent with _$RoundEvent implements GameEvent {
   const RoundEvent._();
   const factory RoundEvent({
     @Default('') String id,
+    required String gameId,
     required GameEventType type,
     required String roundId,
     required RoundType roundType,
@@ -22,6 +23,7 @@ abstract class RoundEvent with _$RoundEvent implements GameEvent {
 
   factory RoundEvent.ofRoundStart(Round round) {
     return RoundEvent(
+      gameId: round.gameId,
       roundId: round.id,
       roundType: round.roundType,
       type: GameEventType.roundStart,

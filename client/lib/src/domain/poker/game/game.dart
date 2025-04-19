@@ -9,6 +9,7 @@ part 'game.g.dart';
 @freezed
 abstract class Game with _$Game {
   const factory Game({
+    @Default('') String id,
     required Deck deck,
     required List<Player> players,
     required List<Round> rounds,

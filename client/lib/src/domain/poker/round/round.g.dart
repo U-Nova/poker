@@ -8,6 +8,7 @@ part of 'round.dart';
 
 _Round _$RoundFromJson(Map<String, dynamic> json) => _Round(
   id: json['id'] as String? ?? '',
+  gameId: json['gameId'] as String,
   roundType: $enumDecode(_$RoundTypeEnumMap, json['roundType']),
   currentBetAmount: (json['currentBetAmount'] as num).toInt(),
   playerTurn:
@@ -18,6 +19,7 @@ _Round _$RoundFromJson(Map<String, dynamic> json) => _Round(
 
 Map<String, dynamic> _$RoundToJson(_Round instance) => <String, dynamic>{
   'id': instance.id,
+  'gameId': instance.gameId,
   'roundType': _$RoundTypeEnumMap[instance.roundType]!,
   'currentBetAmount': instance.currentBetAmount,
   'playerTurn': instance.playerTurn.map((e) => e.toJson()).toList(),

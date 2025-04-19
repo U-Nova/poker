@@ -9,6 +9,7 @@ part of 'round_event_dto.dart';
 _RoundEventDto _$RoundEventDtoFromJson(Map<String, dynamic> json) =>
     _RoundEventDto(
       id: json['id'] as String? ?? '',
+      gameId: json['gameId'] as String,
       type: $enumDecode(_$GameEventTypeEnumMap, json['type']),
       roundId: json['roundId'] as String,
       roundType: $enumDecode(_$RoundTypeEnumMap, json['roundType']),
@@ -16,6 +17,7 @@ _RoundEventDto _$RoundEventDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$RoundEventDtoToJson(_RoundEventDto instance) =>
     <String, dynamic>{
+      'gameId': instance.gameId,
       'type': _$GameEventTypeEnumMap[instance.type]!,
       'roundId': instance.roundId,
       'roundType': _$RoundTypeEnumMap[instance.roundType]!,

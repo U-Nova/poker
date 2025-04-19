@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Round {
 
- String get id; RoundType get roundType; int get currentBetAmount; List<PlayerTurn> get playerTurn;
+ String get id; String get gameId; RoundType get roundType; int get currentBetAmount; List<PlayerTurn> get playerTurn;
 /// Create a copy of Round
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,16 @@ $RoundCopyWith<Round> get copyWith => _$RoundCopyWithImpl<Round>(this as Round, 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Round&&(identical(other.id, id) || other.id == id)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other.playerTurn, playerTurn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Round&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other.playerTurn, playerTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,roundType,currentBetAmount,const DeepCollectionEquality().hash(playerTurn));
+int get hashCode => Object.hash(runtimeType,id,gameId,roundType,currentBetAmount,const DeepCollectionEquality().hash(playerTurn));
 
 @override
 String toString() {
-  return 'Round(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
+  return 'Round(id: $id, gameId: $gameId, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
 }
 
 
@@ -49,7 +49,7 @@ abstract mixin class $RoundCopyWith<$Res>  {
   factory $RoundCopyWith(Round value, $Res Function(Round) _then) = _$RoundCopyWithImpl;
 @useResult
 $Res call({
- String id, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
+ String id, String gameId, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
 });
 
 
@@ -66,9 +66,10 @@ class _$RoundCopyWithImpl<$Res>
 
 /// Create a copy of Round
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? roundType = null,Object? currentBetAmount = null,Object? playerTurn = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? gameId = null,Object? roundType = null,Object? currentBetAmount = null,Object? playerTurn = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable
 as RoundType,currentBetAmount: null == currentBetAmount ? _self.currentBetAmount : currentBetAmount // ignore: cast_nullable_to_non_nullable
 as int,playerTurn: null == playerTurn ? _self.playerTurn : playerTurn // ignore: cast_nullable_to_non_nullable
@@ -83,10 +84,11 @@ as List<PlayerTurn>,
 @JsonSerializable()
 
 class _Round implements Round {
-  const _Round({this.id = '', required this.roundType, required this.currentBetAmount, required final  List<PlayerTurn> playerTurn}): _playerTurn = playerTurn;
+  const _Round({this.id = '', required this.gameId, required this.roundType, required this.currentBetAmount, required final  List<PlayerTurn> playerTurn}): _playerTurn = playerTurn;
   factory _Round.fromJson(Map<String, dynamic> json) => _$RoundFromJson(json);
 
 @override@JsonKey() final  String id;
+@override final  String gameId;
 @override final  RoundType roundType;
 @override final  int currentBetAmount;
  final  List<PlayerTurn> _playerTurn;
@@ -110,16 +112,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Round&&(identical(other.id, id) || other.id == id)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other._playerTurn, _playerTurn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Round&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundType, roundType) || other.roundType == roundType)&&(identical(other.currentBetAmount, currentBetAmount) || other.currentBetAmount == currentBetAmount)&&const DeepCollectionEquality().equals(other._playerTurn, _playerTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,roundType,currentBetAmount,const DeepCollectionEquality().hash(_playerTurn));
+int get hashCode => Object.hash(runtimeType,id,gameId,roundType,currentBetAmount,const DeepCollectionEquality().hash(_playerTurn));
 
 @override
 String toString() {
-  return 'Round(id: $id, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
+  return 'Round(id: $id, gameId: $gameId, roundType: $roundType, currentBetAmount: $currentBetAmount, playerTurn: $playerTurn)';
 }
 
 
@@ -130,7 +132,7 @@ abstract mixin class _$RoundCopyWith<$Res> implements $RoundCopyWith<$Res> {
   factory _$RoundCopyWith(_Round value, $Res Function(_Round) _then) = __$RoundCopyWithImpl;
 @override @useResult
 $Res call({
- String id, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
+ String id, String gameId, RoundType roundType, int currentBetAmount, List<PlayerTurn> playerTurn
 });
 
 
@@ -147,9 +149,10 @@ class __$RoundCopyWithImpl<$Res>
 
 /// Create a copy of Round
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? roundType = null,Object? currentBetAmount = null,Object? playerTurn = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? gameId = null,Object? roundType = null,Object? currentBetAmount = null,Object? playerTurn = null,}) {
   return _then(_Round(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable
 as RoundType,currentBetAmount: null == currentBetAmount ? _self.currentBetAmount : currentBetAmount // ignore: cast_nullable_to_non_nullable
 as int,playerTurn: null == playerTurn ? _self._playerTurn : playerTurn // ignore: cast_nullable_to_non_nullable

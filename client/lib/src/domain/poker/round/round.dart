@@ -9,6 +9,7 @@ part 'round.g.dart';
 abstract class Round with _$Round {
   const factory Round({
     @Default('') String id,
+    required String gameId,
     required RoundType roundType,
     required int currentBetAmount,
     required List<PlayerTurn> playerTurn,
