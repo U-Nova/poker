@@ -1,5 +1,4 @@
 import 'package:client/src/adapter/firestore/dto/firestore_dto.dart';
-import 'package:client/src/domain/poker/game_event/game_event_type.dart';
 import 'package:client/src/domain/poker/game_event/round_event/round_event.dart';
 import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -15,7 +14,6 @@ abstract class RoundEventDto with _$RoundEventDto implements FirestoreDto {
     @JsonKey(includeToJson: false, includeFromJson: true)
     String id,
     required String gameId,
-    required GameEventType type,
     required String roundId,
     required RoundType roundType,
   }) = _RoundEventDto;
@@ -27,7 +25,6 @@ abstract class RoundEventDto with _$RoundEventDto implements FirestoreDto {
     return RoundEventDto(
       id: roundEvent.id,
       gameId: roundEvent.gameId,
-      type: roundEvent.type,
       roundId: roundEvent.roundId,
       roundType: roundEvent.roundType,
     );
@@ -37,7 +34,6 @@ abstract class RoundEventDto with _$RoundEventDto implements FirestoreDto {
     return RoundEvent(
       id: id,
       gameId: gameId,
-      type: type,
       roundId: roundId,
       roundType: roundType,
     );

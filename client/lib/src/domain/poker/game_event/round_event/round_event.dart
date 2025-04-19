@@ -1,5 +1,4 @@
 import 'package:client/src/domain/poker/game_event/game_event.dart';
-import 'package:client/src/domain/poker/game_event/game_event_type.dart';
 import 'package:client/src/domain/poker/round/round.dart';
 import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -13,7 +12,6 @@ abstract class RoundEvent with _$RoundEvent implements GameEvent {
   const factory RoundEvent({
     @Default('') String id,
     required String gameId,
-    required GameEventType type,
     required String roundId,
     required RoundType roundType,
   }) = _RoundEvent;
@@ -26,7 +24,6 @@ abstract class RoundEvent with _$RoundEvent implements GameEvent {
       gameId: round.gameId,
       roundId: round.id,
       roundType: round.roundType,
-      type: GameEventType.roundStart,
     );
   }
 }

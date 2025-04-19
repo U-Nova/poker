@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RoundEventDto {
 
-@JsonKey(includeToJson: false, includeFromJson: true) String get id; String get gameId; GameEventType get type; String get roundId; RoundType get roundType;
+@JsonKey(includeToJson: false, includeFromJson: true) String get id; String get gameId; String get roundId; RoundType get roundType;
 /// Create a copy of RoundEventDto
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,16 @@ $RoundEventDtoCopyWith<RoundEventDto> get copyWith => _$RoundEventDtoCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoundEventDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.type, type) || other.type == type)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoundEventDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,gameId,type,roundId,roundType);
+int get hashCode => Object.hash(runtimeType,id,gameId,roundId,roundType);
 
 @override
 String toString() {
-  return 'RoundEventDto(id: $id, gameId: $gameId, type: $type, roundId: $roundId, roundType: $roundType)';
+  return 'RoundEventDto(id: $id, gameId: $gameId, roundId: $roundId, roundType: $roundType)';
 }
 
 
@@ -49,7 +49,7 @@ abstract mixin class $RoundEventDtoCopyWith<$Res>  {
   factory $RoundEventDtoCopyWith(RoundEventDto value, $Res Function(RoundEventDto) _then) = _$RoundEventDtoCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, GameEventType type, String roundId, RoundType roundType
+@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, String roundId, RoundType roundType
 });
 
 
@@ -66,12 +66,11 @@ class _$RoundEventDtoCopyWithImpl<$Res>
 
 /// Create a copy of RoundEventDto
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? gameId = null,Object? type = null,Object? roundId = null,Object? roundType = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? gameId = null,Object? roundId = null,Object? roundType = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
-as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as GameEventType,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
+as String,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable
 as RoundType,
   ));
@@ -84,12 +83,11 @@ as RoundType,
 @JsonSerializable()
 
 class _RoundEventDto extends RoundEventDto {
-  const _RoundEventDto({@JsonKey(includeToJson: false, includeFromJson: true) this.id = '', required this.gameId, required this.type, required this.roundId, required this.roundType}): super._();
+  const _RoundEventDto({@JsonKey(includeToJson: false, includeFromJson: true) this.id = '', required this.gameId, required this.roundId, required this.roundType}): super._();
   factory _RoundEventDto.fromJson(Map<String, dynamic> json) => _$RoundEventDtoFromJson(json);
 
 @override@JsonKey(includeToJson: false, includeFromJson: true) final  String id;
 @override final  String gameId;
-@override final  GameEventType type;
 @override final  String roundId;
 @override final  RoundType roundType;
 
@@ -106,16 +104,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoundEventDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.type, type) || other.type == type)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoundEventDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.roundType, roundType) || other.roundType == roundType));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,gameId,type,roundId,roundType);
+int get hashCode => Object.hash(runtimeType,id,gameId,roundId,roundType);
 
 @override
 String toString() {
-  return 'RoundEventDto(id: $id, gameId: $gameId, type: $type, roundId: $roundId, roundType: $roundType)';
+  return 'RoundEventDto(id: $id, gameId: $gameId, roundId: $roundId, roundType: $roundType)';
 }
 
 
@@ -126,7 +124,7 @@ abstract mixin class _$RoundEventDtoCopyWith<$Res> implements $RoundEventDtoCopy
   factory _$RoundEventDtoCopyWith(_RoundEventDto value, $Res Function(_RoundEventDto) _then) = __$RoundEventDtoCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, GameEventType type, String roundId, RoundType roundType
+@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, String roundId, RoundType roundType
 });
 
 
@@ -143,12 +141,11 @@ class __$RoundEventDtoCopyWithImpl<$Res>
 
 /// Create a copy of RoundEventDto
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? gameId = null,Object? type = null,Object? roundId = null,Object? roundType = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? gameId = null,Object? roundId = null,Object? roundType = null,}) {
   return _then(_RoundEventDto(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
-as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as GameEventType,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
+as String,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
 as String,roundType: null == roundType ? _self.roundType : roundType // ignore: cast_nullable_to_non_nullable
 as RoundType,
   ));
