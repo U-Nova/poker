@@ -22,6 +22,7 @@ class StartPreflopRoundUsecase extends AbstractUsecase<Game, Game> {
 
     final round = await roundRepository.register(
       Round(
+        gameId: game.id,
         roundType: RoundType.PREFLOP,
         currentBetAmount: game.pods,
         playerTurn: [],

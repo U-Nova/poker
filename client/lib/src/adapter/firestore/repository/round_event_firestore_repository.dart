@@ -29,7 +29,16 @@ class RoundEventFirestoreRepository extends FirestoreRepository<RoundEventDto> {
     await collectionRef().doc(dto.id).update(dto.toJson());
   }
 
-  Stream<DocumentSnapshot<RoundEventDto>> listen(RoundEventDto dto) {
-    return collectionRef().doc(dto.id).snapshots();
+  // 指定したgameIdに紐づくドキュメントが追加された場合に取得する
+  Stream<List<RoundEventDto>> stream(String gameId) {
+    return collectionRef()
+        .where('gameId', isEqualTo: gameId)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docChanges
+          .where((change) => change.type == DocumentChangeType.added)
+          .map((change) => change.doc.data()!)
+          .toList();
+    });
   }
 }

@@ -36,6 +36,7 @@ class SampleUsecase extends AbstractUsecase<String, Game> {
       ],
       setting: TableSetting(rule: ""),
     );
+    // _ref.read(gameEngineProvider).startGame(x);
     final game = x.startGame();
     // print(game);
 
