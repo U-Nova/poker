@@ -1,5 +1,5 @@
 import 'package:client/src/domain/poker/game_event/game_event.dart';
-import 'package:client/src/domain/poker/single_thread_queue.dart';
+import 'package:client/src/util/single_thread_queue.dart';
 
 class GameEventQueue extends SingleThreadQueue<GameEvent> {
   static GameEventQueue? _instance;
