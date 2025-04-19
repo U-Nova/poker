@@ -7,10 +7,10 @@ part 'player_turn.g.dart';
 @freezed
 abstract class PlayerTurn with _$PlayerTurn {
   const factory PlayerTurn({
-    //項目は仮
+    @Default('') String id,
+    required String gameId,
+    required String roundId,
     required String playerId,
-    required DateTime startDatetime,
-    required DateTime endDatetime,
     required PlayerAction playerAction,
   }) = _PlayerTurn;
 

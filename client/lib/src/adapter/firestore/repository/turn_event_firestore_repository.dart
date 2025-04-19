@@ -1,19 +1,19 @@
 import 'package:client/src/adapter/firestore/collection_keys.dart';
-import 'package:client/src/adapter/firestore/dto/round_event_dto/round_event_dto.dart';
+import 'package:client/src/adapter/firestore/dto/turn_event_dto/turn_event_dto.dart';
 import 'package:client/src/adapter/firestore/repository/firestore_repository.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final roundEventFirestoreRepositoryProvider =
-    Provider<RoundEventFirestoreRepository>(RoundEventFirestoreRepository.new);
+final turnEventFirestoreRepositoryProvider =
+    Provider<TurnEventFirestoreRepository>(TurnEventFirestoreRepository.new);
 
-class RoundEventFirestoreRepository extends FirestoreRepository<RoundEventDto> {
-  RoundEventFirestoreRepository(this._ref)
-      : super(CollectionKeys.roundEvent, RoundEventDto.fromJson);
+class TurnEventFirestoreRepository extends FirestoreRepository<TurnEventDto> {
+  TurnEventFirestoreRepository(this._ref)
+      : super(CollectionKeys.turnEvent, TurnEventDto.fromJson);
   final Ref _ref;
 
   // 指定したgameIdに紐づくドキュメントが追加された場合に取得する
-  Stream<List<RoundEventDto>> stream(String gameId) {
+  Stream<List<TurnEventDto>> stream(String gameId) {
     return collectionRef()
         .where('gameId', isEqualTo: gameId)
         .snapshots()

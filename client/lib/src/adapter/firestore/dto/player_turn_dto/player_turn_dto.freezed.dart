@@ -4,7 +4,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'player_turn.dart';
+part of 'player_turn_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,22 +14,22 @@ part of 'player_turn.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$PlayerTurn {
+mixin _$PlayerTurnDto {
 
- String get id; String get gameId; String get roundId; String get playerId; PlayerAction get playerAction;
-/// Create a copy of PlayerTurn
+@JsonKey(includeToJson: false, includeFromJson: true) String get id; String get gameId; String get roundId; String get playerId; PlayerAction get playerAction;
+/// Create a copy of PlayerTurnDto
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$PlayerTurnCopyWith<PlayerTurn> get copyWith => _$PlayerTurnCopyWithImpl<PlayerTurn>(this as PlayerTurn, _$identity);
+$PlayerTurnDtoCopyWith<PlayerTurnDto> get copyWith => _$PlayerTurnDtoCopyWithImpl<PlayerTurnDto>(this as PlayerTurnDto, _$identity);
 
-  /// Serializes this PlayerTurn to a JSON map.
+  /// Serializes this PlayerTurnDto to a JSON map.
   Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PlayerTurn&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.playerId, playerId) || other.playerId == playerId)&&(identical(other.playerAction, playerAction) || other.playerAction == playerAction));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PlayerTurnDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.playerId, playerId) || other.playerId == playerId)&&(identical(other.playerAction, playerAction) || other.playerAction == playerAction));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -38,18 +38,18 @@ int get hashCode => Object.hash(runtimeType,id,gameId,roundId,playerId,playerAct
 
 @override
 String toString() {
-  return 'PlayerTurn(id: $id, gameId: $gameId, roundId: $roundId, playerId: $playerId, playerAction: $playerAction)';
+  return 'PlayerTurnDto(id: $id, gameId: $gameId, roundId: $roundId, playerId: $playerId, playerAction: $playerAction)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $PlayerTurnCopyWith<$Res>  {
-  factory $PlayerTurnCopyWith(PlayerTurn value, $Res Function(PlayerTurn) _then) = _$PlayerTurnCopyWithImpl;
+abstract mixin class $PlayerTurnDtoCopyWith<$Res>  {
+  factory $PlayerTurnDtoCopyWith(PlayerTurnDto value, $Res Function(PlayerTurnDto) _then) = _$PlayerTurnDtoCopyWithImpl;
 @useResult
 $Res call({
- String id, String gameId, String roundId, String playerId, PlayerAction playerAction
+@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, String roundId, String playerId, PlayerAction playerAction
 });
 
 
@@ -57,14 +57,14 @@ $PlayerActionCopyWith<$Res> get playerAction;
 
 }
 /// @nodoc
-class _$PlayerTurnCopyWithImpl<$Res>
-    implements $PlayerTurnCopyWith<$Res> {
-  _$PlayerTurnCopyWithImpl(this._self, this._then);
+class _$PlayerTurnDtoCopyWithImpl<$Res>
+    implements $PlayerTurnDtoCopyWith<$Res> {
+  _$PlayerTurnDtoCopyWithImpl(this._self, this._then);
 
-  final PlayerTurn _self;
-  final $Res Function(PlayerTurn) _then;
+  final PlayerTurnDto _self;
+  final $Res Function(PlayerTurnDto) _then;
 
-/// Create a copy of PlayerTurn
+/// Create a copy of PlayerTurnDto
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? gameId = null,Object? roundId = null,Object? playerId = null,Object? playerAction = null,}) {
   return _then(_self.copyWith(
@@ -76,7 +76,7 @@ as String,playerAction: null == playerAction ? _self.playerAction : playerAction
 as PlayerAction,
   ));
 }
-/// Create a copy of PlayerTurn
+/// Create a copy of PlayerTurnDto
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -92,30 +92,30 @@ $PlayerActionCopyWith<$Res> get playerAction {
 /// @nodoc
 @JsonSerializable()
 
-class _PlayerTurn implements PlayerTurn {
-  const _PlayerTurn({this.id = '', required this.gameId, required this.roundId, required this.playerId, required this.playerAction});
-  factory _PlayerTurn.fromJson(Map<String, dynamic> json) => _$PlayerTurnFromJson(json);
+class _PlayerTurnDto extends PlayerTurnDto {
+  const _PlayerTurnDto({@JsonKey(includeToJson: false, includeFromJson: true) this.id = '', required this.gameId, required this.roundId, required this.playerId, required this.playerAction}): super._();
+  factory _PlayerTurnDto.fromJson(Map<String, dynamic> json) => _$PlayerTurnDtoFromJson(json);
 
-@override@JsonKey() final  String id;
+@override@JsonKey(includeToJson: false, includeFromJson: true) final  String id;
 @override final  String gameId;
 @override final  String roundId;
 @override final  String playerId;
 @override final  PlayerAction playerAction;
 
-/// Create a copy of PlayerTurn
+/// Create a copy of PlayerTurnDto
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$PlayerTurnCopyWith<_PlayerTurn> get copyWith => __$PlayerTurnCopyWithImpl<_PlayerTurn>(this, _$identity);
+_$PlayerTurnDtoCopyWith<_PlayerTurnDto> get copyWith => __$PlayerTurnDtoCopyWithImpl<_PlayerTurnDto>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$PlayerTurnToJson(this, );
+  return _$PlayerTurnDtoToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PlayerTurn&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.playerId, playerId) || other.playerId == playerId)&&(identical(other.playerAction, playerAction) || other.playerAction == playerAction));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PlayerTurnDto&&(identical(other.id, id) || other.id == id)&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.roundId, roundId) || other.roundId == roundId)&&(identical(other.playerId, playerId) || other.playerId == playerId)&&(identical(other.playerAction, playerAction) || other.playerAction == playerAction));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -124,18 +124,18 @@ int get hashCode => Object.hash(runtimeType,id,gameId,roundId,playerId,playerAct
 
 @override
 String toString() {
-  return 'PlayerTurn(id: $id, gameId: $gameId, roundId: $roundId, playerId: $playerId, playerAction: $playerAction)';
+  return 'PlayerTurnDto(id: $id, gameId: $gameId, roundId: $roundId, playerId: $playerId, playerAction: $playerAction)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$PlayerTurnCopyWith<$Res> implements $PlayerTurnCopyWith<$Res> {
-  factory _$PlayerTurnCopyWith(_PlayerTurn value, $Res Function(_PlayerTurn) _then) = __$PlayerTurnCopyWithImpl;
+abstract mixin class _$PlayerTurnDtoCopyWith<$Res> implements $PlayerTurnDtoCopyWith<$Res> {
+  factory _$PlayerTurnDtoCopyWith(_PlayerTurnDto value, $Res Function(_PlayerTurnDto) _then) = __$PlayerTurnDtoCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String gameId, String roundId, String playerId, PlayerAction playerAction
+@JsonKey(includeToJson: false, includeFromJson: true) String id, String gameId, String roundId, String playerId, PlayerAction playerAction
 });
 
 
@@ -143,17 +143,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$PlayerTurnCopyWithImpl<$Res>
-    implements _$PlayerTurnCopyWith<$Res> {
-  __$PlayerTurnCopyWithImpl(this._self, this._then);
+class __$PlayerTurnDtoCopyWithImpl<$Res>
+    implements _$PlayerTurnDtoCopyWith<$Res> {
+  __$PlayerTurnDtoCopyWithImpl(this._self, this._then);
 
-  final _PlayerTurn _self;
-  final $Res Function(_PlayerTurn) _then;
+  final _PlayerTurnDto _self;
+  final $Res Function(_PlayerTurnDto) _then;
 
-/// Create a copy of PlayerTurn
+/// Create a copy of PlayerTurnDto
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? gameId = null,Object? roundId = null,Object? playerId = null,Object? playerAction = null,}) {
-  return _then(_PlayerTurn(
+  return _then(_PlayerTurnDto(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
 as String,roundId: null == roundId ? _self.roundId : roundId // ignore: cast_nullable_to_non_nullable
@@ -163,7 +163,7 @@ as PlayerAction,
   ));
 }
 
-/// Create a copy of PlayerTurn
+/// Create a copy of PlayerTurnDto
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
