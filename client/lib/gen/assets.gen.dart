@@ -132,20 +132,20 @@ class $AssetsImagesPlayingcardNormalClubGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        a1,
-        a10,
-        a11,
-        a12,
-        a13,
-        a2,
-        a3,
-        a4,
-        a5,
-        a6,
-        a7,
-        a8,
-        a9,
-      ];
+    a1,
+    a10,
+    a11,
+    a12,
+    a13,
+    a2,
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+  ];
 }
 
 class $AssetsImagesPlayingcardNormalDiaGen {
@@ -205,20 +205,20 @@ class $AssetsImagesPlayingcardNormalDiaGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        a1,
-        a10,
-        a11,
-        a12,
-        a13,
-        a2,
-        a3,
-        a4,
-        a5,
-        a6,
-        a7,
-        a8,
-        a9,
-      ];
+    a1,
+    a10,
+    a11,
+    a12,
+    a13,
+    a2,
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+  ];
 }
 
 class $AssetsImagesPlayingcardNormalHeartGen {
@@ -278,20 +278,20 @@ class $AssetsImagesPlayingcardNormalHeartGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        a1,
-        a10,
-        a11,
-        a12,
-        a13,
-        a2,
-        a3,
-        a4,
-        a5,
-        a6,
-        a7,
-        a8,
-        a9,
-      ];
+    a1,
+    a10,
+    a11,
+    a12,
+    a13,
+    a2,
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+  ];
 }
 
 class $AssetsImagesPlayingcardNormalJokerGen {
@@ -362,20 +362,20 @@ class $AssetsImagesPlayingcardNormalSpadeGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        a1,
-        a10,
-        a11,
-        a12,
-        a13,
-        a2,
-        a3,
-        a4,
-        a5,
-        a6,
-        a7,
-        a8,
-        a9,
-      ];
+    a1,
+    a10,
+    a11,
+    a12,
+    a13,
+    a2,
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+  ];
 }
 
 class Assets {

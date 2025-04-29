@@ -1,24 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'turn_event.dart';
+part of 'turn_end_event_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_TurnEvent _$TurnEventFromJson(Map<String, dynamic> json) => _TurnEvent(
-  id: json['id'] as String? ?? '',
-  gameId: json['gameId'] as String,
-  type: $enumDecode(_$GameEventTypeEnumMap, json['type']),
-  turnId: json['turnId'] as String,
-);
+_TurnEndEventDto _$TurnEndEventDtoFromJson(Map<String, dynamic> json) =>
+    _TurnEndEventDto(
+      id: json['id'] as String? ?? '',
+      gameId: json['gameId'] as String,
+      type: $enumDecode(_$GameEventTypeEnumMap, json['type']),
+      playerTurn: PlayerTurn.fromJson(
+        json['playerTurn'] as Map<String, dynamic>,
+      ),
+    );
 
-Map<String, dynamic> _$TurnEventToJson(_TurnEvent instance) =>
+Map<String, dynamic> _$TurnEndEventDtoToJson(_TurnEndEventDto instance) =>
     <String, dynamic>{
-      'id': instance.id,
       'gameId': instance.gameId,
       'type': _$GameEventTypeEnumMap[instance.type]!,
-      'turnId': instance.turnId,
+      'playerTurn': instance.playerTurn.toJson(),
     };
 
 const _$GameEventTypeEnumMap = {

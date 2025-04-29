@@ -15,6 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GameViewModel {
 
+/// TODO: 再描画の最適化をしたいので、viewModelはGameのプロパティを別々で持つようにしたい
  Game get game;
 /// Create a copy of GameViewModel
 /// with the given fields replaced by the non-null parameter values.
@@ -89,6 +90,7 @@ class _GameViewModel implements GameViewModel {
   const _GameViewModel({required this.game});
   
 
+/// TODO: 再描画の最適化をしたいので、viewModelはGameのプロパティを別々で持つようにしたい
 @override final  Game game;
 
 /// Create a copy of GameViewModel
