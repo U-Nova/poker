@@ -9,9 +9,8 @@ part 'community_cards.g.dart';
 
 @freezed
 abstract class CommunityCards with _$CommunityCards {
-  const factory CommunityCards({
-    required List<CommunityCard> communityCards,
-  }) = _CommunityCards;
+  const factory CommunityCards({required List<CommunityCard> communityCards}) =
+      _CommunityCards;
 
   factory CommunityCards.fromJson(Map<String, Object?> json) =>
       _$CommunityCardsFromJson(json);
@@ -21,11 +20,24 @@ abstract class CommunityCards with _$CommunityCards {
     final flopCards = cards.sublist(0, NUMBER_OF_FLOP_CARDS);
     final turnCard = cards.sublist(NUMBER_OF_FLOP_CARDS)[0];
     final riverCard = cards.sublist(NUMBER_OF_FLOP_CARDS)[1];
-    return CommunityCards(communityCards: [
-      ...flopCards
-          .map((card) => CommunityCard.init(card, CommunityCardOrder.flop)),
-      CommunityCard.init(turnCard, CommunityCardOrder.turn),
-      CommunityCard.init(riverCard, CommunityCardOrder.river),
-    ]);
+    return CommunityCards(
+      communityCards: [
+        ...flopCards.map(
+          (card) => CommunityCard.init(card, CommunityCardOrder.flop),
+        ),
+        CommunityCard.init(turnCard, CommunityCardOrder.turn),
+        CommunityCard.init(riverCard, CommunityCardOrder.river),
+      ],
+    );
   }
+}
+
+extension CommunityCardsEx on CommunityCards {
+  List<Card> getAllCards() => communityCards.map((card) => card.card).toList();
+
+  List<Card> getOpenCards() =>
+      communityCards
+          .where((card) => card.isOpen)
+          .map((card) => card.card)
+          .toList();
 }

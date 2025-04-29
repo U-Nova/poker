@@ -1,6 +1,8 @@
 import 'package:client/gen/assets.gen.dart';
 import 'package:client/src/application/poker/start_preflop_round_usecase.dart';
+import 'package:client/src/const/hand.dart';
 import 'package:client/src/const/image/playingcard/playingcard_image_provider.dart';
+import 'package:client/src/domain/poker/seven_cards/seven_cards.dart';
 import 'package:client/src/page/game/game_presenter.dart';
 import 'package:client/src/router.dart';
 import 'package:collection/collection.dart';
@@ -64,11 +66,13 @@ class GameView extends ConsumerWidget {
                           Row(
                             children: [
                               ...communityCards
-                                  .map((card) => Image.memory(
-                                        images.getBy(card.card.imageKey(null))!,
-                                        width: 50,
-                                      ))
-                                  .toList()
+                                  .map(
+                                    (card) => Image.memory(
+                                      images.getBy(card.card.imageKey(null))!,
+                                      width: 50,
+                                    ),
+                                  )
+                                  .toList(),
                             ],
                           ),
                           ...holeCards.mapIndexed(
@@ -85,17 +89,32 @@ class GameView extends ConsumerWidget {
                                 Row(
                                   children: [
                                     ...e.cards
-                                        .map((card) => Image.memory(
-                                              images
-                                                  .getBy(card.imageKey(null))!,
-                                              width: 50,
-                                            ))
-                                        .toList()
+                                        .map(
+                                          (card) => Image.memory(
+                                            images.getBy(card.imageKey(null))!,
+                                            width: 50,
+                                          ),
+                                        )
+                                        .toList(),
+                                    Text(
+                                      JudgeHand(
+                                        SevenCards(
+                                          communityCards:
+                                              game.deck.communityCards,
+                                          holeCards: e,
+                                        ),
+                                      ).judgeHand().labelUpperCase,
+                                      style: TextStyle(
+                                        color: Colors.greenAccent,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ],
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
