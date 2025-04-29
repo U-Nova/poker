@@ -16,6 +16,10 @@ class GamePresenter extends AutoDisposeNotifier<GameViewModel> {
     return GameViewModel(game: game);
   }
 
+  Future<void> update() async {
+    state = state.copyWith(game: ref.read(gameProvider).orThrow);
+  }
+
   Future<void> endGame() async {
     await ref.read(gameEngineProvider).endGame();
     router.pop();

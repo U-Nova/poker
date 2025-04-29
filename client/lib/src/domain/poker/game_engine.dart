@@ -8,21 +8,28 @@ import 'package:client/src/domain/poker/game_event_consumer/game_event_consumer.
 import 'package:client/src/domain/poker/game_event_consumer/round_event_consumer.dart';
 import 'package:client/src/domain/poker/game_event_consumer/turn_event_consumer.dart';
 import 'package:client/src/util/logger.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final gameEngineProvider = Provider<GameEngine>(GameEngine.new);
 
-class GameEngine with RoundEventConsumer, TurnEventConsumer, GameEventConsumer {
-  GameEngine(this._ref);
-  final Ref _ref;
+abstract class GameEngineBase {
+  GameEngineBase(this.ref);
+  @protected
+  final Ref ref;
+}
+
+class GameEngine extends GameEngineBase
+    with RoundEventConsumer, TurnEventConsumer, GameEventConsumer {
+  GameEngine(Ref ref) : super(ref);
   final List<StreamSubscription<dynamic>> listeners = [];
 
   Future<void> startGame() async {
     logger.d("GameEngine: startGame");
-    final game = _ref.read(gameProvider).orThrow;
+    final game = ref.read(gameProvider).orThrow;
     final _queue = GameEventQueue();
 
-    listeners.add(_ref.read(gameEventListenerProvider).listen(game));
+    listeners.add(ref.read(gameEventListenerProvider).listen(game));
     _queue.addComsumers(gameEventConsumer);
   }
 
@@ -33,6 +40,6 @@ class GameEngine with RoundEventConsumer, TurnEventConsumer, GameEventConsumer {
     listeners.forEach((listener) => listener.cancel());
     listeners.clear();
     _queue.dispose();
-    _ref.read(gameProvider.notifier).endGame();
+    ref.read(gameProvider.notifier).endGame();
   }
 }
