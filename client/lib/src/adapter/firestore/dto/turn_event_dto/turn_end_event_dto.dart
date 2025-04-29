@@ -1,5 +1,6 @@
 import 'package:client/src/adapter/firestore/dto/firestore_dto.dart';
 import 'package:client/src/domain/poker/game_event/game_event_type.dart';
+import 'package:client/src/domain/poker/game_event/turn_event/turn_end_event.dart';
 import 'package:client/src/domain/poker/player_turn/player_turn.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -20,4 +21,21 @@ abstract class TurnEndEventDto with _$TurnEndEventDto implements FirestoreDto {
 
   factory TurnEndEventDto.fromJson(Map<String, Object?> json) =>
       _$TurnEndEventDtoFromJson(json);
+
+  factory TurnEndEventDto.fromDomain(TurnEndEvent event) {
+    return TurnEndEventDto(
+      id: event.id,
+      gameId: event.gameId,
+      type: event.type,
+      playerTurn: event.playerTurn,
+    );
+  }
+  TurnEndEvent toDomain() {
+    return TurnEndEvent(
+      id: id,
+      gameId: gameId,
+      type: type,
+      playerTurn: playerTurn,
+    );
+  }
 }

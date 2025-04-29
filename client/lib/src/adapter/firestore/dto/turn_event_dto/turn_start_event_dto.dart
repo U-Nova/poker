@@ -1,5 +1,6 @@
 import 'package:client/src/adapter/firestore/dto/firestore_dto.dart';
 import 'package:client/src/domain/poker/game_event/game_event_type.dart';
+import 'package:client/src/domain/poker/game_event/turn_event/turn_start_event.dart';
 import 'package:client/src/domain/poker/player/player.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -22,4 +23,21 @@ abstract class TurnStartEventDto
 
   factory TurnStartEventDto.fromJson(Map<String, Object?> json) =>
       _$TurnStartEventDtoFromJson(json);
+
+  factory TurnStartEventDto.fromDomain(TurnStartEvent event) {
+    return TurnStartEventDto(
+      id: event.id,
+      gameId: event.gameId,
+      type: event.type,
+      player: event.player,
+    );
+  }
+  TurnStartEvent toDomain() {
+    return TurnStartEvent(
+      id: id,
+      gameId: gameId,
+      type: type,
+      player: player,
+    );
+  }
 }

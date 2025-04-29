@@ -1,5 +1,9 @@
 import 'package:client/src/application/abstract_usecase.dart';
-import 'package:client/src/auth/auth_provider.dart';
+import 'package:client/src/application/poker/repository/turn_event_repository.dart';
+import 'package:client/src/domain/poker/game/game.dart';
+import 'package:client/src/domain/poker/game/game_provider.dart';
+import 'package:client/src/domain/poker/game_event/game_event_type.dart';
+import 'package:client/src/domain/poker/game_event/turn_event/turn_start_event.dart';
 import 'package:client/src/domain/poker/player/player.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -14,20 +18,9 @@ class StartPlayerTurnUsecase
 
   @override
   Future<void> execute((Player player, int currentBetAmout) req) async {
-    // タイマーの開始。ターンごとの最大持ち時間はルーム設定で良さそう
-    final _authProvider = _ref.read(authProvider.notifier);
-    if (_authProvider.isSignedInAs(req.$1.id)) {
-      await myTurn();
-    } else {
-      await otherTurn();
-    }
-    return;
+    final game = _ref.read(gameProvider).orThrow;
+    final event = TurnStartEvent(
+        gameId: game.id, type: GameEventType.turnStart, player: req.$1);
+    await _ref.read(turnEventRepositoryProvider).register(event);
   }
-
-  Future<void> myTurn() async {
-    // 引数からPlayerTurnを生成する
-    // PlayerTurnを使って実行可能なアクションの選択ができるようにする
-  }
-
-  Future<void> otherTurn() async {}
 }
