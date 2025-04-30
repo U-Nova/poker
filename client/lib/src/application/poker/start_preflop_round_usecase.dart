@@ -1,11 +1,9 @@
 import 'package:client/src/application/abstract_usecase.dart';
+import 'package:client/src/application/poker/repository/game_repository.dart';
 import 'package:client/src/application/poker/repository/round_event_repository.dart';
 import 'package:client/src/application/poker/repository/round_repository.dart';
 import 'package:client/src/domain/poker/game/game.dart';
 import 'package:client/src/domain/poker/game/game_provider.dart';
-import 'package:client/src/domain/poker/game_event/round_event/round_event.dart';
-import 'package:client/src/domain/poker/round/round.dart';
-import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final startPreflopRoundUsecaseProvider =
@@ -21,17 +19,10 @@ class StartPreflopRoundUsecase extends AbstractUsecase<void, void> {
     final roundRepository = _ref.read(roundRepositoryProvider);
     final roundEventRepository = _ref.read(roundEventRepositoryProvider);
     final game = _ref.read(gameProvider).orThrow;
+    final gameRepository = _ref.read(gameRepositoryProvider);
 
-    final round = await roundRepository.register(
-      Round(
-        gameId: game.id,
-        roundType: RoundType.PREFLOP,
-        currentBetAmount: game.pods,
-        playerTurn: [],
-      ),
-    );
-    await roundEventRepository.register(
-      RoundEvent.ofRoundStart(round),
-    );
+    final round = await roundRepository.register(game.startPreflopRound());
+    final event = await gameRepository.startRound(round);
+    await roundEventRepository.register(event);
   }
 }

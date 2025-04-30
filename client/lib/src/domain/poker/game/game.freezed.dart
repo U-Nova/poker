@@ -93,8 +93,8 @@ $DeckCopyWith<$Res> get deck {
 /// @nodoc
 @JsonSerializable()
 
-class _Game implements Game {
-  const _Game({this.id = '', required this.deck, required final  List<Player> players, required final  List<Round> rounds, required this.pods, required this.buttonPlayerId}): _players = players,_rounds = rounds;
+class _Game extends Game {
+  const _Game({this.id = '', required this.deck, required final  List<Player> players, required final  List<Round> rounds, required this.pods, required this.buttonPlayerId}): _players = players,_rounds = rounds,super._();
   factory _Game.fromJson(Map<String, dynamic> json) => _$GameFromJson(json);
 
 @override@JsonKey() final  String id;

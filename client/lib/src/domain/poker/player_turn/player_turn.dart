@@ -7,7 +7,6 @@ part 'player_turn.g.dart';
 @freezed
 abstract class PlayerTurn with _$PlayerTurn {
   const factory PlayerTurn({
-    @Default('') String id,
     required String gameId,
     required String roundId,
     required String playerId,

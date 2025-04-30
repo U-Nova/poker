@@ -1,6 +1,5 @@
 import 'package:client/src/domain/poker/game_event/game_event.dart';
 import 'package:client/src/domain/poker/game_event/game_event_type.dart';
-import 'package:client/src/domain/poker/round/round.dart';
 import 'package:client/src/domain/poker/round/round_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -20,13 +19,4 @@ abstract class RoundEvent with _$RoundEvent implements GameEvent {
 
   factory RoundEvent.fromJson(Map<String, Object?> json) =>
       _$RoundEventFromJson(json);
-
-  factory RoundEvent.ofRoundStart(Round round) {
-    return RoundEvent(
-      gameId: round.gameId,
-      type: GameEventType.roundStart,
-      roundId: round.id,
-      roundType: round.roundType,
-    );
-  }
 }
