@@ -1,4 +1,4 @@
-import 'package:client/src/domain/user/user.dart';
+import 'package:client/src/domain/user/user_info.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final authProvider = NotifierProvider<AuthProvider, String>(AuthProvider.new);
@@ -9,7 +9,7 @@ class AuthProvider extends Notifier<String> {
     return "";
   }
 
-  void signIn(User user) {
+  void signIn(UserInfo user) {
     state = user.id;
   }
 

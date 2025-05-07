@@ -19,6 +19,9 @@ class $AssetsImagesGen {
   /// Directory path: assets/images/playingcard
   $AssetsImagesPlayingcardGen get playingcard =>
       const $AssetsImagesPlayingcardGen();
+
+  /// Directory path: assets/images/user
+  $AssetsImagesUserGen get user => const $AssetsImagesUserGen();
 }
 
 class $AssetsImagesBackgroundGen {
@@ -42,6 +45,13 @@ class $AssetsImagesPlayingcardGen {
   /// Directory path: assets/images/playingcard/normal
   $AssetsImagesPlayingcardNormalGen get normal =>
       const $AssetsImagesPlayingcardNormalGen();
+}
+
+class $AssetsImagesUserGen {
+  const $AssetsImagesUserGen();
+
+  /// Directory path: assets/images/user/icon
+  $AssetsImagesUserIconGen get icon => const $AssetsImagesUserIconGen();
 }
 
 class $AssetsImagesPlayingcardNormalGen {
@@ -73,6 +83,17 @@ class $AssetsImagesPlayingcardNormalGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [back];
+}
+
+class $AssetsImagesUserIconGen {
+  const $AssetsImagesUserIconGen();
+
+  /// File path: assets/images/user/icon/user_icon_default_1.png
+  AssetGenImage get userIconDefault1 =>
+      const AssetGenImage('assets/images/user/icon/user_icon_default_1.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [userIconDefault1];
 }
 
 class $AssetsImagesPlayingcardNormalClubGen {

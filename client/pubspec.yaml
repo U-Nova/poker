@@ -89,6 +89,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/background/
+    - assets/images/user/icon/
     - assets/images/playingcard/normal/
     - assets/images/playingcard/normal/club/
     - assets/images/playingcard/normal/dia/

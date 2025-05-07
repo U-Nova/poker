@@ -8,14 +8,14 @@ part of 'player.dart';
 
 _Player _$PlayerFromJson(Map<String, dynamic> json) => _Player(
   id: json['id'] as String,
-  userId: json['userId'] as String,
+  user: UserInfo.fromJson(json['user'] as Map<String, dynamic>),
   order: (json['order'] as num).toInt(),
   tip: (json['tip'] as num).toInt(),
 );
 
 Map<String, dynamic> _$PlayerToJson(_Player instance) => <String, dynamic>{
   'id': instance.id,
-  'userId': instance.userId,
+  'user': instance.user.toJson(),
   'order': instance.order,
   'tip': instance.tip,
 };

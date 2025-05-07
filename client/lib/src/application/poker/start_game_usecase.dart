@@ -4,6 +4,7 @@ import 'package:client/src/domain/poker/game_engine.dart';
 import 'package:client/src/domain/poker/player/player.dart';
 import 'package:client/src/domain/poker/poker_table/poker_table.dart';
 import 'package:client/src/domain/poker/table_setting/table_setting.dart';
+import 'package:client/src/domain/user/user_info.dart';
 import 'package:client/src/util/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -26,10 +27,14 @@ class StartGameUsecase extends AbstractUsecase<void, void> {
     logger.d("StartGameUsecase: execute");
     final table = PokerTable(
       players: [
-        Player(id: "id001", userId: "userId001", order: 0, tip: 100),
-        Player(id: "id002", userId: "userId002", order: 1, tip: 100),
-        Player(id: "id003", userId: "userId003", order: 2, tip: 100),
-        Player(id: "id004", userId: "userId004", order: 3, tip: 100),
+        Player(
+            id: "id001", user: UserInfo(id: "userId001"), order: 0, tip: 100),
+        Player(
+            id: "id002", user: UserInfo(id: "userId002"), order: 1, tip: 100),
+        Player(
+            id: "id003", user: UserInfo(id: "userId003"), order: 2, tip: 100),
+        Player(
+            id: "id004", user: UserInfo(id: "userId004"), order: 3, tip: 100),
       ],
       setting: TableSetting(rule: ""),
     );

@@ -7,7 +7,6 @@ part of 'player_turn.dart';
 // **************************************************************************
 
 _PlayerTurn _$PlayerTurnFromJson(Map<String, dynamic> json) => _PlayerTurn(
-  id: json['id'] as String? ?? '',
   gameId: json['gameId'] as String,
   roundId: json['roundId'] as String,
   playerId: json['playerId'] as String,
@@ -18,7 +17,6 @@ _PlayerTurn _$PlayerTurnFromJson(Map<String, dynamic> json) => _PlayerTurn(
 
 Map<String, dynamic> _$PlayerTurnToJson(_PlayerTurn instance) =>
     <String, dynamic>{
-      'id': instance.id,
       'gameId': instance.gameId,
       'roundId': instance.roundId,
       'playerId': instance.playerId,

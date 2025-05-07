@@ -19,6 +19,8 @@ abstract class GameEngineBase {
   final Ref ref;
 }
 
+/// 本当は設計的にgamePresenterのmixinにした方が良かったかも。consumerの中でgamePresenterを呼びたくなるので、暗黙的な依存ができている。
+/// まあ、実際gamePresenterがない時に呼び出す実装を間違ってすることはないような気がするので一旦妥協。
 class GameEngine extends GameEngineBase
     with RoundEventConsumer, TurnEventConsumer, GameEventConsumer {
   GameEngine(Ref ref) : super(ref);
