@@ -88,12 +88,29 @@ class $AssetsImagesPlayingcardNormalGen {
 class $AssetsImagesUserIconGen {
   const $AssetsImagesUserIconGen();
 
+  /// File path: assets/images/user/icon/user_icon_anime_1.png
+  AssetGenImage get userIconAnime1 =>
+      const AssetGenImage('assets/images/user/icon/user_icon_anime_1.png');
+
   /// File path: assets/images/user/icon/user_icon_default_1.png
   AssetGenImage get userIconDefault1 =>
       const AssetGenImage('assets/images/user/icon/user_icon_default_1.png');
 
+  /// File path: assets/images/user/icon/user_icon_default_2.png
+  AssetGenImage get userIconDefault2 =>
+      const AssetGenImage('assets/images/user/icon/user_icon_default_2.png');
+
+  /// File path: assets/images/user/icon/user_icon_special_1.png
+  AssetGenImage get userIconSpecial1 =>
+      const AssetGenImage('assets/images/user/icon/user_icon_special_1.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [userIconDefault1];
+  List<AssetGenImage> get values => [
+    userIconAnime1,
+    userIconDefault1,
+    userIconDefault2,
+    userIconSpecial1,
+  ];
 }
 
 class $AssetsImagesPlayingcardNormalClubGen {

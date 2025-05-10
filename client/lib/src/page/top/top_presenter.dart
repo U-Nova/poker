@@ -13,8 +13,7 @@ class TopPresenter extends AutoDisposeNotifier<TopViewModel> {
   }
 
   Future<void> startGame() async {
-    // TODO: 仮実装
     await ref.read(startGameUsecaseProvider).execute('');
-    router.pushNamed('/game');
+    await router.pushNamed('/game');
   }
 }
